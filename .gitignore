@@ -1,0 +1,29 @@
+/**/__pycache__/*
+test_settings.py
+deploy_settings.py
+*.pyc
+
+# gitignore - Truffle proj
+.idea/
+build/
+bin/
+node_modules
+yarn-error.log
+
+# Our environment settings
+.env
+
+# Build artifacts
+flattened-contracts/
+
+# For eth-gas-reporter in tests
+test-gas-used.log
+
+# For integration testing
+keys.json
+
+# vscode
+.vscode/launch.json
+
+.DS_Store
+

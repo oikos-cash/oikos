@@ -1,0 +1,8 @@
+sudo: enabled
+language: node_js
+node_js:
+  - 10.16.3
+before_install:
+  - npm ci
+script:
+  - npm run test:gas # run test and show gas used
