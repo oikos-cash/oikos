@@ -19,7 +19,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/oikos/contracts.git"
+		"url": "git+https://github.com/oikos-cash/oikos.git"
 	},
 	"keywords": [
 		"oikos",
@@ -41,7 +41,7 @@
 	},
 	"main": "index.js",
 	"bugs": {
-		"url": "https://github.com/oikos/contracts/issues"
+		"url": "https://github.com/oikos-cash/oikos/issues"
 	},
 	"homepage": "https://oikos.cash",
 	"directories": {
