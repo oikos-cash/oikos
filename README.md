@@ -1,6 +1,6 @@
 # Oikos Tron Contracts
 
-[![npm version](https://badge.fury.io/js/@oikos/oikos.svg)](https://badge.fury.io/js/@oikos/oikos)
+[![npm version](https://badge.fury.io/js/%40oikos%2Foikos.svg)](https://badge.fury.io/js/%40oikos%2Foikos)
 [![Twitter Follow](https://img.shields.io/twitter/follow/oikos_cash.svg?label=oikos_cash&style=social)](https://twitter.com/oikos_cash)
 
 Oikos is Synthetix for Tron: a crypto-backed synthetic asset platform.
