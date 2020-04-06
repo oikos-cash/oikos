@@ -19,7 +19,7 @@ The code here will be under continual audit and improvement as the project progr
 
 - https://mint.oikos.cash
 - https://oikos.exchange
-- https://swat.oikos.cash
+- https://swap.oikos.cash
 
 ## Branching
 
