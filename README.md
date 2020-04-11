@@ -17,7 +17,7 @@ The code here will be under continual audit and improvement as the project progr
 
 ## DApps
 
-- https://mint.oikos.cash
+- https://minter.oikos.cash
 - https://oikos.exchange
 - https://swap.oikos.cash
 
@@ -58,15 +58,15 @@ oikos.getSynths({ network: 'shasta' }).map(({ name }) => name);
 Same as above but as a CLI tool that outputs JSON:
 
 ```bash
-npx oikos target --network rinkeby --contract ProxySynthetix
+npx @oikos/oikos target --network shasta --contract ProxySynthetix
 
-npx oikos source --network rinkeby --contract Proxy
+npx @oikos/oikos source --network shasta --contract Proxy
 # {
 #   "bytecode": "0..0",
 #   "abi": [ ... ]
 # }
 
-npx oikos synths --network rinkeby --key name
+npx @oikos/oikos synths --network shasta --key name
 # ["XDR", "sUSD", "sEUR", ... ]
 ```
 
