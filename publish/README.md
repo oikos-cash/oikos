@@ -1,6 +1,6 @@
 # Publisher
 
-This script can `build` (compile and flatten), `deploy` and `verify` (on Etherscan) the Synthetix code to a testnet or mainnet.
+This script can `build` (compile and flatten), `deploy` and `verify` (on Tronscan) the Oikos code to a testnet or mainnet.
 
 ## 1. Build
 
@@ -61,12 +61,12 @@ node publish deploy -n shasta -d publish/deployed/shasta -g 20
 
 ## 3. Verify
 
-Will attempt to verify the contracts on Etherscan (by uploading the flattened source files and ABIs).
+Will attempt to verify the contracts on Tronscan (by uploading the flattened source files and ABIs).
 
 :warning: **Note: the `build` step is required for the ABIs and the `deploy` step for the live addresses to use.**
 
 ```bash
-# verify (verify compiled sources by uploading flattened source to Etherscan via their API)
+# verify (verify compiled sources by uploading flattened source to Tronscan via their API)
 node publish verify # "--help" for options
 ```
 
@@ -142,7 +142,7 @@ node publish purge-synths # "--help" for options
 
 ## Generate token file
 
-Th `generate-token-list` command will generate an array of token proxy addresses for the given deployment to be used in the Synthetix website. The command outputs a JSON array to the console.
+Th `generate-token-list` command will generate an array of token proxy addresses for the given deployment to be used in the Oikos website. The command outputs a JSON array to the console.
 
 ```bash
 # output a list of token addresses, decimals and symbol names for all the token proxy contracts
