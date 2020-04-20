@@ -76,7 +76,7 @@ contract SynthetixState is State, LimitedSetup {
 
     // A quantity of synths greater than this ratio
     // may not be issued against a given value of OKS.
-    uint public issuanceRatio = SafeDecimalMath.unit() / 5;
+    uint public issuanceRatio = SafeDecimalMath.unit() / 75 / 10;
     // No more synths may be issued than the value of OKS backing them.
     uint constant MAX_ISSUANCE_RATIO = SafeDecimalMath.unit();
 

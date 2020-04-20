@@ -65,6 +65,7 @@ const DEFAULTS = {
 	contractDeploymentFeeLimit: 1e9, // tron
 	network: 'shasta',
 	buildPath: path.join(__dirname, '..', '..', '..', BUILD_FOLDER),
+	oracleExrates: '41aad3910a630b033cef3b1f8ea1eb93a71e5f7376',
 };
 
 const deploy = async ({
@@ -1382,7 +1383,8 @@ module.exports = {
 			)
 			.option(
 				'-o, --oracle-exrates <value>',
-				'The address of the oracle for this network (default is use existing)'
+				'The address of the oracle for this network (default is use existing)',
+				DEFAULTS.oracleExrates
 			)
 			.option(
 				'-p, --oracle-depot <value>',
