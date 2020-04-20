@@ -37,7 +37,6 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
     DelegateApprovals public delegates;
 
     // Where fees are pooled in XDRs.
-    // @TODO: @kev change this hardcoded address?
     address public constant FEE_ADDRESS = 0xfeEFEEfeefEeFeefEEFEEfEeFeefEEFeeFEEFEeF;
 
     // This struct represents the issuance activity that's happened in a fee period.
