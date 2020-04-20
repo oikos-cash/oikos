@@ -210,8 +210,8 @@ contract SynthetixState is State, LimitedSetup {
         // during setup only.
         Synthetix synthetix = Synthetix(associatedContract);
 
-        // What is the value of the requested debt in XDRs?
-        uint xdrValue = synthetix.effectiveValue("sUSD", amount, "XDR");
+        // What is the value of the requested debt in ODRs?
+        uint xdrValue = synthetix.effectiveValue("sUSD", amount, "ODR");
 
         // What is the value that we've previously imported?
         uint totalDebtIssued = importedXDRAmount;
@@ -231,7 +231,7 @@ contract SynthetixState is State, LimitedSetup {
         // The delta is a high precision integer.
         uint delta = SafeDecimalMath.preciseUnit().sub(debtPercentage);
 
-        uint existingDebt = synthetix.debtBalanceOf(account, "XDR");
+        uint existingDebt = synthetix.debtBalanceOf(account, "ODR");
 
         // And what does their debt ownership look like including this previous stake?
         if (existingDebt > 0) {

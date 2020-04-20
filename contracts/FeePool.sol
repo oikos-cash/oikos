@@ -36,7 +36,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
     // The address to the DelegateApproval contract.
     DelegateApprovals public delegates;
 
-    // Where fees are pooled in XDRs.
+    // Where fees are pooled in ODRs.
     address public constant FEE_ADDRESS = 0xfeEFEEfeefEeFeefEEFEEfEeFeefEEFeeFEEFEeF;
 
     // This struct represents the issuance activity that's happened in a fee period.
@@ -232,13 +232,13 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
 
     /**
      * @notice The Synthetix contract informs us when fees are paid.
-     * @param xdrAmount xdr amount in fees being paid.
+     * @param xdrAmount Odr amount in fees being paid.
      */
     function recordFeePaid(uint xdrAmount)
         external
         onlySynthetix
     {
-        // Keep track of in XDRs in our fee pool.
+        // Keep track of in ODRs in our fee pool.
         _recentFeePeriodsStorage(0).feesToDistribute = _recentFeePeriodsStorage(0).feesToDistribute.add(xdrAmount);
     }
 
@@ -336,7 +336,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
         require(isFeesClaimable(claimingAddress), "C-Ratio below penalty threshold");
 
         // Get the claimingAddress available fees and rewards
-        (availableFees, availableRewards) = feesAvailable(claimingAddress, "XDR");
+        (availableFees, availableRewards) = feesAvailable(claimingAddress, "ODR");
 
         require(availableFees > 0 || availableRewards > 0, "No fees or rewards available for period, or fees already claimed");
 
@@ -430,7 +430,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
 
     /**
      * @notice Record the fee payment in our recentFeePeriods.
-     * @param xdrAmount The amount of fees priced in XDRs.
+     * @param xdrAmount The amount of fees priced in ODRs.
      */
     function _recordFeePayment(uint xdrAmount)
         internal
@@ -513,7 +513,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
     /**
     * @notice Send the fees to claiming address.
     * @param account The address to send the fees to.
-    * @param xdrAmount The amount of fees priced in XDRs.
+    * @param xdrAmount The amount of fees priced in ODRs.
     * @param destinationCurrencyKey The synth currency the user wishes to receive their fees in (convert to this currency).
     */
     function _payFees(address account, uint xdrAmount, bytes32 destinationCurrencyKey)
@@ -525,7 +525,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
         require(account != address(proxy), "Can't send fees to proxy");
         require(account != address(synthetix), "Can't send fees to synthetix");
 
-        Synth xdrSynth = synthetix.synths("XDR"); // This could be gas optimised by using a setter for XDR synth address
+        Synth xdrSynth = synthetix.synths("ODR"); // This could be gas optimised by using a setter for ODR synth address
         Synth destinationSynth = synthetix.synths(destinationCurrencyKey);
 
         // Note: We don't need to check the fee pool balance as the burn() below will do a safe subtraction which requires
@@ -535,7 +535,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
         xdrSynth.burn(FEE_ADDRESS, xdrAmount);
 
         // How much should they get in the destination currency?
-        uint destinationAmount = synthetix.effectiveValue("XDR", xdrAmount, destinationCurrencyKey);
+        uint destinationAmount = synthetix.effectiveValue("ODR", xdrAmount, destinationCurrencyKey);
 
         // There's no fee on withdrawing fees, as that'd be way too meta.
 
@@ -627,7 +627,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
             totalFees = totalFees.sub(_recentFeePeriodsStorage(i).feesClaimed);
         }
 
-        return synthetix.effectiveValue("XDR", totalFees, currencyKey);
+        return synthetix.effectiveValue("ODR", totalFees, currencyKey);
     }
 
     /**
@@ -674,7 +674,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
         // And convert totalFees to their desired currency
         // Return totalRewards as is in OKS amount
         return (
-            synthetix.effectiveValue("XDR", totalFees, currencyKey),
+            synthetix.effectiveValue("ODR", totalFees, currencyKey),
             totalRewards
         );
     }
@@ -711,7 +711,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
     }
 
     /**
-     * @notice Calculates fees by period for an account, priced in XDRs
+     * @notice Calculates fees by period for an account, priced in ODRs
      * @param account The address you want to query the fees for
      */
     function feesByPeriod(address account)

@@ -41,12 +41,12 @@ contract ExchangeRates is SelfDestructible {
     uint public rateStalePeriod = 3 hours;
 
 
-    // Each participating currency in the XDR basket is represented as a currency key with
+    // Each participating currency in the ODR basket is represented as a currency key with
     // equal weighting.
     // There are 5 participating currencies, so we'll declare that clearly.
     bytes32[5] public xdrParticipants;
 
-    // A conveience mapping for checking if a rate is a XDR participant
+    // A conveience mapping for checking if a rate is a ODR participant
     mapping(bytes32 => bool) public isXDRParticipant;
 
     // For inverted prices, keep a mapping of their entry, limits and frozen status
@@ -89,7 +89,7 @@ contract ExchangeRates is SelfDestructible {
         // The sUSD rate is always 1 and is never stale.
         _setRate("sUSD", SafeDecimalMath.unit(), now);
 
-        // These are the currencies that make up the XDR basket.
+        // These are the currencies that make up the ODR basket.
         // These are hard coded because:
         //  - This way users can depend on the calculation and know it won't change for this deployment of the contract.
         //  - Adding new currencies would likely introduce some kind of weighting factor, which
@@ -104,7 +104,7 @@ contract ExchangeRates is SelfDestructible {
             bytes32("sGBP")
         ];
 
-        // Mapping the XDR participants is cheaper than looping the xdrParticipants array to check if they exist
+        // Mapping the ODR participants is cheaper than looping the xdrParticipants array to check if they exist
         isXDRParticipant[bytes32("sUSD")] = true;
         isXDRParticipant[bytes32("sAUD")] = true;
         isXDRParticipant[bytes32("sCHF")] = true;
@@ -115,8 +115,8 @@ contract ExchangeRates is SelfDestructible {
     }
 
     function getRateAndUpdatedTime(bytes32 code) internal view returns (RateAndUpdatedTime) {
-        if (code == "XDR") {
-            // The XDR rate is the sum of the underlying XDR participant rates, and the latest
+        if (code == "ODR") {
+            // The ODR rate is the sum of the underlying ODR participant rates, and the latest
             // timestamp from those rates
             uint total = 0;
             uint lastUpdated = 0;
