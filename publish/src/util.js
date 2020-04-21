@@ -68,7 +68,8 @@ const loadAndCheckRequiredSources = ({ deploymentPath, network }) => {
 };
 
 const loadConnections = ({ network }) => {
-	const privateKey = process.env.DEPLOY_PRIVATE_KEY;
+	const privateKey =
+		network === 'mainnet' ? process.env.DEPLOY_PRIVATE_KEY_MAINNET : process.env.DEPLOY_PRIVATE_KEY;
 	if (network !== 'local' && !privateKey)
 		throw new Error('Set environment variable DEPLOY_PRIVATE_KEY to a Tron private key');
 

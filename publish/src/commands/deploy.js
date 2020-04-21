@@ -938,7 +938,7 @@ const deploy = async ({
 			try {
 				const oldSynth = await getExistingContract({ contract: `Synth${currencyKey}` });
 				if (oldSynth) {
-					originalTotalSupply = toWeb3BN(await oldSynth.methods.totalSupply().call());
+					originalTotalSupply = await oldSynth.methods.totalSupply().call();
 				}
 			} catch (err) {
 				if (network !== 'local') {

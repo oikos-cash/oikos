@@ -151,7 +151,8 @@ class Deployer {
 
 	async getContract({ abi, address }) {
 		// return new this.web3.eth.Contract(abi, address);
-		return this.tronWeb.contract().at(address);
+		// console.log(abi);
+		return this.tronWeb.contract(abi, address);
 	}
 }
 
