@@ -1,0 +1,15 @@
+#!/bin/bash
+set +x
+
+# rm -rf build/
+# node publish build
+
+# cat > publish/deployed/mainnet/deployment.json <<EOF
+# {
+# 	"targets": {},
+# 	"sources": {}
+# }
+# EOF
+
+# sed -i '' 's/false/true/g' publish/deployed/mainnet/config.json
+node publish deploy -n mainnet -d publish/deployed/mainnet --yes
