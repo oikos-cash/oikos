@@ -463,7 +463,8 @@ const deploy = async ({
 
 	// Set exchangeRates.stalePeriod to 1 sec if mainnet
 	if (exchangeRates && config['ExchangeRates'].deploy && network === 'mainnet') {
-		const rateStalePeriod = 1;
+		// const rateStalePeriod = 1;
+		const rateStalePeriod = 60 * 2;
 		await runStep({
 			contract: 'ExchangeRates',
 			target: exchangeRates,
