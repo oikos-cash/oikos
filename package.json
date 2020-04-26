@@ -15,7 +15,9 @@
 		"test:gas": "npm test; EXIT_CODE=$?; cat test-gas-used.log; printf \"\\n\"; exit $EXIT_CODE;",
 		"test:publish": "concurrently --kill-others --success first \"npm run ganache:int > /dev/null\" \"wait-port 8545 && mocha test/publish\"",
 		"test:testnet": "node test/testnet",
-		"truffle": "truffle"
+		"truffle": "truffle",
+		"deploy:mainnet": "node publish deploy -n mainnet -d publish/deployed/mainnet",
+		"build": "node publish build"
 	},
 	"repository": {
 		"type": "git",
