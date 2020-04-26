@@ -5,7 +5,7 @@
 
 Oikos is Synthetix for Tron: a crypto-backed synthetic asset platform.
 
-It is a multitoken system, powered by OKS, the Oikos Network Token. OKS holders can lock OKS to issue on-chain synthetic assets. The network currently supports seven synthetic assets, sUSD (Synthetic USD), sAUD, sEUR, sGBP, sJPY, sKRW, sXAU (a synthetic gold ounce) and sXDR (a basket of synthetic currencies).
+It is a multitoken system, powered by OKS, the Oikos Network Token. OKS holders can lock OKS to issue on-chain synthetic assets. The network currently supports seven synthetic assets, sUSD (Synthetic USD), sAUD, sEUR, sGBP, sJPY, sKRW, sXAU (a synthetic gold ounce) and sODR (a basket of synthetic currencies).
 
 Oikos uses a proxy system so that upgrades will not be disruptive to the functionality of the contract. This smooths user interaction, since new functionality will become available without any interruption in their experience. It is also transparent to the community at large, since each upgrade is accompanied by events announcing those upgrades.
 
@@ -50,7 +50,7 @@ oikos.getSource({ network: 'shasta', contract: 'Proxy' });
 
 // retrieve the array of assets used
 oikos.getSynths({ network: 'shasta' }).map(({ name }) => name);
-// ['XDR', 'sUSD', 'sEUR', ...]
+// ['ODR', 'sUSD', 'sEUR', ...]
 ```
 
 ### As an npm CLI tool
@@ -67,7 +67,7 @@ npx @oikos/oikos source --network shasta --contract Proxy
 # }
 
 npx @oikos/oikos synths --network shasta --key name
-# ["XDR", "sUSD", "sEUR", ... ]
+# ["ODR", "sUSD", "sEUR", ... ]
 ```
 
 ### For tests (in JavaScript)
@@ -92,7 +92,7 @@ As users transact in the system, small fees are remitted, which get sent to OKS 
 
 Users are able to withdraw their fees in any nomin currency that we support. Users are entitled to fees once they've issued synthetic assets (to help create the economy generating the fees) and waited for a complete fee period to elapse (currently 7 days). Issuers are incentivised to maintain the ratio of collateral (OKS) to assets such that the assets in circulation are generally only worth 20% of the value of the Oikos Network Tokens backing them up via a penalty for being over 20% collateralised. This allows pretty severe price shocks to OKS without threatening the value of the assets.
 
-We have also invented a nomin currency called XDRs (Oikos Drawing Rights, loosely modeled on SDRs from the UN). Its exchange rate is derived by looking at a basket aggregate of currencies to avoid biasing towards any particular fiat currency. Fees are stored in this currency, and users can hold these assets if they want to lessen the impact on their holdings from a particular fiat currency changing in value.
+We have also invented a nomin currency called ODRs (Oikos Drawing Rights, loosely modeled on SDRs from the UN). Its exchange rate is derived by looking at a basket aggregate of currencies to avoid biasing towards any particular fiat currency. Fees are stored in this currency, and users can hold these assets if they want to lessen the impact on their holdings from a particular fiat currency changing in value.
 
 Now that we have an `exchange()` mechanism that allows users to switch between assets, it made sense to move the fee logic out the asset token into its own standalone contract. This allows us to have more complex fee collection logic as well.
 
@@ -104,7 +104,7 @@ Also it's worth noting that there's a decimal library being used for "floating p
 
 - **ExchangeRates.sol:** A key value store (bytes4 -> uint) of currency exchange rates, all priced in USD. Understands the concept of whether a rate is stale (as in hasn't been updated frequently enough), and only allows a single annointed oracle address to do price updates.
 - **ExternStateToken.sol:** The concept of an ERC20 token which stores its allowances and balances outside of the contract for upgradability.
-- **FeePool.sol:** Understands fee information for Oikos. As users transact, their fees are kept in `0xfeefeefee...` and stored in XDRs. Allows users to claim fees they're entitled to.
+- **FeePool.sol:** Understands fee information for Oikos. As users transact, their fees are kept in `0xfeefeefee...` and stored in ODRs. Allows users to claim fees they're entitled to.
 - **Synthetix.sol:** Has a list of assets and understands issuance data for users to be able to mint and burn asssets.
 - **SynthetixEscrow.sol:** During the crowdsale, users were asked to escrow their Havvens to insulate against price shocks on the token. Users are able to unlock their OKS on a vesting schedule.
 - **Depot.sol:** Allows users to exchange ETH for sUSD and OKS (has not yet been updated for multicurrency).
