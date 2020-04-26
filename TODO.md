@@ -1,1 +1,0 @@
-- Check that all constants make sense for Tron (e.g. in deploy/tron/.../synths.json the inverted values, initial supply, etc.)
