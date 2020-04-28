@@ -1,8 +1,1 @@
-{
-	"SynthetixEscrow.setHavven(Synthetix)": {
-		"target": "41d79a61976e66eecb763e7cc72db56305ee4ae415",
-		"action": "setHavven(412634ed70d2010c2a7173f8cc2c0734466f56e4d2)",
-		"complete": false,
-		"link": "https://tronscan.org/address/41d79a61976e66eecb763e7cc72db56305ee4ae415#writeContract"
-	}
-}
+{}
