@@ -464,7 +464,7 @@ const deploy = async ({
 	// Set exchangeRates.stalePeriod to 1 sec if mainnet
 	if (exchangeRates && config['ExchangeRates'].deploy && network === 'mainnet') {
 		// const rateStalePeriod = 1;
-		const rateStalePeriod = 60 * 2;
+		const rateStalePeriod = 60 * 30; // 30 minutes
 		await runStep({
 			contract: 'ExchangeRates',
 			target: exchangeRates,
@@ -805,6 +805,7 @@ const deploy = async ({
 	if (config['Synthetix'].deploy || config['SynthetixEscrow'].deploy) {
 		// Note: currently on mainnet SynthetixEscrow.methods.synthetix() does NOT exist
 		// it is "havven" and the ABI we have here is not sufficient
+		/*
 		if (network === 'mainnet') {
 			appendOwnerAction({
 				key: `SynthetixEscrow.setHavven(Synthetix)`,
@@ -820,7 +821,16 @@ const deploy = async ({
 				write: 'setSynthetix',
 				writeArg: synthetixAddress,
 			});
-		}
+    }
+    */
+		await runStep({
+			contract: 'SynthetixEscrow',
+			target: synthetixEscrow,
+			read: 'synthetix',
+			expected: input => input === synthetixAddress,
+			write: 'setSynthetix',
+			writeArg: synthetixAddress,
+		});
 	}
 
 	// Read Synthetix Proxy address
@@ -888,7 +898,7 @@ const deploy = async ({
 	// ----------------
 	// Synths
 	// ----------------
-	let proxysETHAddress;
+	let proxysTRXAddress;
 	for (const { name: currencyKey, inverted, subclass, aggregator } of synths) {
 		const tokenStateForSynth = await deployContract({
 			name: `TokenState${currencyKey}`,
@@ -896,11 +906,6 @@ const deploy = async ({
 			args: [account, ZERO_ADDRESS],
 			force: addNewSynths,
 		});
-
-		// sUSD proxy is used by Kucoin and Bittrex thus requires proxy / integration proxy to be set
-		// const synthProxyIsLegacy = currencyKey === 'sUSD' && network !== 'local';
-		// TODO! @kev: was that useful?
-		// const synthProxyIsLegacy = false;
 
 		const proxyForSynth = await deployContract({
 			name: `Proxy${currencyKey}`,
@@ -910,24 +915,9 @@ const deploy = async ({
 			force: addNewSynths,
 		});
 
-		// @TODO kev: this should probably be proxysTRXAddress?
 		if (currencyKey === 'sTRX') {
-			proxysETHAddress = proxyForSynth.address;
+			proxysTRXAddress = proxyForSynth.address;
 		}
-
-		/*
-		let proxyERC20ForSynth;
-
-		if (synthProxyIsLegacy) {
-			// additionally deploy an ERC20 proxy for the synth if it's legacy (sUSD and not on local)
-			proxyERC20ForSynth = await deployContract({
-				name: `ProxyERC20${currencyKey}`,
-				source: `ProxyERC20`,
-				args: [account],
-				force: addNewSynths,
-			});
-		}
-    */
 
 		const currencyKeyInBytes = toBytes32(currencyKey);
 
@@ -1294,7 +1284,7 @@ const deploy = async ({
 		// @TODO kev: this should be uniswap address on TRON
 		const requiredUniswapExchange = '0xe9Cf7887b93150D4F2Da7dFc6D502B216438F244';
 		// @TODO kev: this should probably be proxysTRONAddress
-		const requiredSynthAddress = proxysETHAddress;
+		const requiredSynthAddress = proxysTRXAddress;
 		await runStep({
 			contract: 'ArbRewarder',
 			target: arbRewarder,
