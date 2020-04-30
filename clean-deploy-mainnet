@@ -1,6 +1,6 @@
 #!/bin/bash
 set +x
-exit
+#exit
 
 rm -rf build/
 node publish build
