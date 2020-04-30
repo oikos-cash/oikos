@@ -37,7 +37,7 @@ contract Synthetix is ExternStateToken {
 
     string constant TOKEN_NAME = "Oikos Network Token";
     string constant TOKEN_SYMBOL = "OKS";
-    uint8 constant DECIMALS = 18;
+    uint8 constant DECIMALS = 6;
     bool public exchangeEnabled = true;
     uint public gasPriceLimit;
 
