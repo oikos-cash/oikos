@@ -146,7 +146,7 @@ contract Synthetix is ExternStateToken {
     {
         require(synths[currencyKey] != address(0), "Synth does not exist");
         require(synths[currencyKey].totalSupply() == 0, "Synth supply exists");
-        require(currencyKey != "XDR" && currencyKey != "sUSD", "Cannot remove synth");
+        require(currencyKey != "ODR" && currencyKey != "sUSD", "Cannot remove synth");
 
         // Save the address we're removing for emitting the event at the end.
         address synthToRemove = synths[currencyKey];
@@ -443,8 +443,8 @@ contract Synthetix is ExternStateToken {
 
         // Remit the fee in XDRs
         if (fee > 0) {
-            uint xdrFeeAmount = effectiveValue(destinationCurrencyKey, fee, "XDR");
-            synths["XDR"].issue(feePool.FEE_ADDRESS(), xdrFeeAmount);
+            uint xdrFeeAmount = effectiveValue(destinationCurrencyKey, fee, "ODR");
+            synths["ODR"].issue(feePool.FEE_ADDRESS(), xdrFeeAmount);
             // Tell the fee pool about this.
             feePool.recordFeePaid(xdrFeeAmount);
         }
@@ -467,10 +467,10 @@ contract Synthetix is ExternStateToken {
         internal
     {
         // What is the value of the requested debt in XDRs?
-        uint xdrValue = effectiveValue(currencyKey, amount, "XDR");
+        uint xdrValue = effectiveValue(currencyKey, amount, "ODR");
 
         // What is the value of all issued synths of the system (priced in XDRs)?
-        uint totalDebtIssued = totalIssuedSynths("XDR");
+        uint totalDebtIssued = totalIssuedSynths("ODR");
 
         // What will the new total be including the new value?
         uint newTotalDebtIssued = xdrValue.add(totalDebtIssued);
@@ -485,7 +485,7 @@ contract Synthetix is ExternStateToken {
         uint delta = SafeDecimalMath.preciseUnit().sub(debtPercentage);
 
         // How much existing debt do they have?
-        uint existingDebt = debtBalanceOf(messageSender, "XDR");
+        uint existingDebt = debtBalanceOf(messageSender, "ODR");
 
         // And what does their debt ownership look like including this previous stake?
         if (existingDebt > 0) {
@@ -561,7 +561,7 @@ contract Synthetix is ExternStateToken {
     /**
      * @notice Burn synths to clear issued synths/free OKS.
      * @param amount The amount (in UNIT base) you wish to burn
-     * @dev The amount to burn is debased to XDR's
+     * @dev The amount to burn is debased to ODR's
      */
     function burnSynths(uint amount)
         external
@@ -571,8 +571,8 @@ contract Synthetix is ExternStateToken {
         bytes32 currencyKey = "sUSD";
 
         // How much debt do they have?
-        uint debtToRemove = effectiveValue(currencyKey, amount, "XDR");
-        uint existingDebt = debtBalanceOf(messageSender, "XDR");
+        uint debtToRemove = effectiveValue(currencyKey, amount, "ODR");
+        uint existingDebt = debtBalanceOf(messageSender, "ODR");
 
         uint debtInCurrencyKey = debtBalanceOf(messageSender, currencyKey);
 
@@ -596,7 +596,7 @@ contract Synthetix is ExternStateToken {
 
     /**
      * @notice Store in the FeePool the users current debt value in the system in XDRs.
-     * @dev debtBalanceOf(messageSender, "XDR") to be used with totalIssuedSynths("XDR") to get
+     * @dev debtBalanceOf(messageSender, "ODR") to be used with totalIssuedSynths("ODR") to get
      *  users % of the system within a feePeriod.
      */
     function _appendAccountIssuanceRecord()
@@ -624,7 +624,7 @@ contract Synthetix is ExternStateToken {
         uint debtToRemove = amount;
 
         // What is the value of all issued synths of the system (priced in XDRs)?
-        uint totalDebtIssued = totalIssuedSynths("XDR");
+        uint totalDebtIssued = totalIssuedSynths("ODR");
 
         // What will the new total after taking out the withdrawn amount
         uint newTotalDebtIssued = totalDebtIssued.sub(debtToRemove);
@@ -707,7 +707,7 @@ contract Synthetix is ExternStateToken {
      * @notice If a user issues synths backed by OKS in their wallet, the OKS become locked. This function
      * will tell you how many synths a user has to give back to the system in order to unlock their original
      * debt position. This is priced in whichever synth is passed in as a currency key, e.g. you can price
-     * the debt in sUSD, XDR, or any other synth you wish.
+     * the debt in sUSD, ODR, or any other synth you wish.
      */
     function debtBalanceOf(address issuer, bytes32 currencyKey)
         public
