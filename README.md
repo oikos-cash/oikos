@@ -3,7 +3,8 @@
 [![npm version](https://badge.fury.io/js/%40oikos%2Foikos.svg)](https://badge.fury.io/js/%40oikos%2Foikos)
 [![Twitter Follow](https://img.shields.io/twitter/follow/oikos_cash.svg?label=oikos_cash&style=social)](https://twitter.com/oikos_cash)
 
-Oikos is Synthetix for Tron: a crypto-backed synthetic asset platform.
+Oikos is a crypto-backed synthetic asset platform for the Tron
+blockchain.
 
 It is a multitoken system, powered by OKS, the Oikos Network Token. OKS holders can lock OKS to issue on-chain synthetic assets. The network currently supports seven synthetic assets, sUSD (Synthetic USD), sAUD, sEUR, sGBP, sJPY, sKRW, sXAU (a synthetic gold ounce) and sODR (a basket of synthetic currencies).
 
