@@ -87,7 +87,7 @@
 		"desc": "Inverted Tron",
 		"subclass": "PurgeableSynth",
 		"inverted": {
-			"upperLimit": 0.1,
+			"upperLimit": 0.028,
 			"entryPoint": 0.015,
 			"lowerLimit": 0.005
 		}
