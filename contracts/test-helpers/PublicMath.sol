@@ -1,18 +1,14 @@
 /* PublicMath.sol: expose the internal functions in Math library
  * for testing purposes.
  */
-pragma solidity 0.4.25;
+pragma solidity 0.5.8;
 
-import "../Math.sol";
+import '../Math.sol';
 
 contract PublicMath {
-    using Math for uint;
+	using Math for uint256;
 
-    function powerDecimal(uint x, uint y)
-        public
-        pure
-        returns (uint)
-    {
-        return x.powDecimal(y);
-    }
+	function powerDecimal(uint256 x, uint256 y) public pure returns (uint256) {
+		return x.powDecimal(y);
+	}
 }

@@ -38,46 +38,41 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-pragma solidity 0.4.25;
+pragma solidity 0.5.8;
 
-import "./Owned.sol";
-import "./interfaces/ISynthetix.sol";
+import './Owned.sol';
+import './interfaces/ISynthetix.sol';
 
 contract SynthetixAirdropper is Owned {
-    /* ========== CONSTRUCTOR ========== */
+	/* ========== CONSTRUCTOR ========== */
 
-    /**
-     * @dev Constructor
-     * @param _owner The owner of this contract.
-     */
-    constructor (address _owner)
-        Owned(_owner)
-        public
-    {}
+	/**
+	 * @dev Constructor
+	 * @param _owner The owner of this contract.
+	 */
+	constructor(address _owner) public Owned(_owner) {}
 
-    /**
-     * @notice Multisend airdrops tokens to an array of destinations.
-     */
-    function multisend(address _tokenAddress, address[] _destinations, uint256[] _values)
-        external
-        onlyOwner
-    {
-        // Protect against obviously incorrect calls.
-        require(_destinations.length == _values.length, "Dests and values mismatch");
+	/**
+	 * @notice Multisend airdrops tokens to an array of destinations.
+	 */
+	function multisend(
+		address _tokenAddress,
+		address[] _destinations,
+		uint256[] _values
+	) external onlyOwner {
+		// Protect against obviously incorrect calls.
+		require(_destinations.length == _values.length, 'Dests and values mismatch');
 
-        // Loop through each destination and perform the transfer.
-        uint256 i = 0;
-        while (i < _destinations.length) {
-            ISynthetix(_tokenAddress).transfer(_destinations[i], _values[i]);
-            i += 1;
-        }
-    }
+		// Loop through each destination and perform the transfer.
+		uint256 i = 0;
+		while (i < _destinations.length) {
+			ISynthetix(_tokenAddress).transfer(_destinations[i], _values[i]);
+			i += 1;
+		}
+	}
 
-    // fallback function for ether sent accidentally to contract
-    function ()
-        external
-        payable
-    {
-        owner.transfer(msg.value);
-    }
+	// fallback function for ether sent accidentally to contract
+	function() external payable {
+		owner.transfer(msg.value);
+	}
 }

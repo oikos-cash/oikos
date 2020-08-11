@@ -1,35 +1,34 @@
-
-pragma solidity 0.4.25;
+pragma solidity 0.5.8;
 
 interface AggregatorInterface {
-    function latestAnswer() external view returns (int256);
-    function latestTimestamp() external view returns (uint256);
-    // function latestRound() external view returns (uint256);
-    // function getAnswer(uint256 roundId) external view returns (int256);
-    // function getTimestamp(uint256 roundId) external view returns (uint256);
+	function latestAnswer() external view returns (int256);
 
-    // event AnswerUpdated(int256 indexed current, uint256 indexed roundId, uint256 timestamp);
-    // event NewRound(uint256 indexed roundId, address indexed startedBy);
+	function latestTimestamp() external view returns (uint256);
+	// function latestRound() external view returns (uint256);
+	// function getAnswer(uint256 roundId) external view returns (int256);
+	// function getTimestamp(uint256 roundId) external view returns (uint256);
+
+	// event AnswerUpdated(int256 indexed current, uint256 indexed roundId, uint256 timestamp);
+	// event NewRound(uint256 indexed roundId, address indexed startedBy);
 }
 
 contract MockAggregator is AggregatorInterface {
+	int256 private _latestAnswer;
+	uint256 private _latestTimestamp;
 
-    int256 private _latestAnswer;
-    uint256 private _latestTimestamp;
+	constructor() public {}
 
-    constructor () public { }
+	// Mock setup function
+	function setLatestAnswer(int256 answer, uint256 timestamp) external {
+		_latestAnswer = answer;
+		_latestTimestamp = timestamp;
+	}
 
-    // Mock setup function
-    function setLatestAnswer(int256 answer, uint256 timestamp) external {
-        _latestAnswer = answer;
-        _latestTimestamp = timestamp;
-    }
+	function latestAnswer() external view returns (int256) {
+		return _latestAnswer;
+	}
 
-    function latestAnswer() external view returns (int256) {
-        return _latestAnswer;
-    }
-
-    function latestTimestamp() external view returns (uint256) {
-        return _latestTimestamp;
-    }
+	function latestTimestamp() external view returns (uint256) {
+		return _latestTimestamp;
+	}
 }

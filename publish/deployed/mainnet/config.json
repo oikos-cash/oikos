@@ -172,5 +172,14 @@
 	},
 	"SynthiTRX": {
 		"deploy": false
+	},
+	"TokenStatesLINK": {
+		"deploy": false
+	},
+	"ProxysLINK": {
+		"deploy": false
+	},
+	"SynthsLINK": {
+		"deploy": false
 	}
 }

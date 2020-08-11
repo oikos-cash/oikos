@@ -104,5 +104,13 @@
 			"upperLimit": 330,
 			"lowerLimit": 110
 		}
+	},
+	{
+		"name": "sLINK",
+		"asset": "LINK",
+		"category": "crypto",
+		"sign": "",
+		"desc": "ChainLink token",
+		"aggregator": ""
 	}
 ]

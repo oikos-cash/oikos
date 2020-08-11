@@ -30,47 +30,39 @@ contract to the new one.
 -----------------------------------------------------------------
 */
 
+pragma solidity 0.5.8;
 
-pragma solidity 0.4.25;
-
-
-import "./Owned.sol";
-
+import './Owned.sol';
 
 contract State is Owned {
-    // the address of the contract that can modify variables
-    // this can only be changed by the owner of this contract
-    address public associatedContract;
+	// the address of the contract that can modify variables
+	// this can only be changed by the owner of this contract
+	address public associatedContract;
 
+	constructor(address _owner, address _associatedContract) public Owned(_owner) {
+		associatedContract = _associatedContract;
+		emit AssociatedContractUpdated(_associatedContract);
+	}
 
-    constructor(address _owner, address _associatedContract)
-        Owned(_owner)
-        public
-    {
-        associatedContract = _associatedContract;
-        emit AssociatedContractUpdated(_associatedContract);
-    }
+	/* ========== SETTERS ========== */
 
-    /* ========== SETTERS ========== */
+	// Change the associated contract to a new address
+	function setAssociatedContract(address _associatedContract) external onlyOwner {
+		associatedContract = _associatedContract;
+		emit AssociatedContractUpdated(_associatedContract);
+	}
 
-    // Change the associated contract to a new address
-    function setAssociatedContract(address _associatedContract)
-        external
-        onlyOwner
-    {
-        associatedContract = _associatedContract;
-        emit AssociatedContractUpdated(_associatedContract);
-    }
+	/* ========== MODIFIERS ========== */
 
-    /* ========== MODIFIERS ========== */
+	modifier onlyAssociatedContract {
+		require(
+			msg.sender == associatedContract,
+			'Only the associated contract can perform this action'
+		);
+		_;
+	}
 
-    modifier onlyAssociatedContract
-    {
-        require(msg.sender == associatedContract, "Only the associated contract can perform this action");
-        _;
-    }
+	/* ========== EVENTS ========== */
 
-    /* ========== EVENTS ========== */
-
-    event AssociatedContractUpdated(address associatedContract);
+	event AssociatedContractUpdated(address associatedContract);
 }

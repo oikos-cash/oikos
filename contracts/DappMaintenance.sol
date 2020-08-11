@@ -1,6 +1,6 @@
-pragma solidity 0.4.25;
+pragma solidity 0.5.8;
 
-import "./Owned.sol";
+import './Owned.sol';
 
 /**
  * @title DappMaintenance contract.
@@ -8,44 +8,32 @@ import "./Owned.sol";
  * to be put on maintenance so no transactions can be done. The DappMaintenance contract is here to keep a state of
  * the dApps which indicates if yes or no, they should be up or down.
  */
-contract DappMaintenance is Owned  {
-    bool public isPausedMintr = false;
-    bool public isPausedSX = false;
+contract DappMaintenance is Owned {
+	bool public isPausedMintr = false;
+	bool public isPausedSX = false;
 
-    /**
-     * @dev Constructor
-     */
-    constructor(address _owner)
-        Owned(_owner)
-        public
-    {}
+	/**
+	 * @dev Constructor
+	 */
+	constructor(address _owner) public Owned(_owner) {}
 
-    function setMaintenanceModeAll(bool isPaused)
-        external
-        onlyOwner
-    {
-        isPausedMintr = isPaused;
-        isPausedSX = isPaused;
-        emit MintrMaintenance(isPaused);
-        emit SXMaintenance(isPaused);
-    }
+	function setMaintenanceModeAll(bool isPaused) external onlyOwner {
+		isPausedMintr = isPaused;
+		isPausedSX = isPaused;
+		emit MintrMaintenance(isPaused);
+		emit SXMaintenance(isPaused);
+	}
 
-    function setMaintenanceModeMintr(bool isPaused)
-        external
-        onlyOwner
-    {
-        isPausedMintr = isPaused;
-        emit MintrMaintenance(isPausedMintr);
-    }
+	function setMaintenanceModeMintr(bool isPaused) external onlyOwner {
+		isPausedMintr = isPaused;
+		emit MintrMaintenance(isPausedMintr);
+	}
 
-    function setMaintenanceModeSX(bool isPaused)
-        external
-        onlyOwner
-    {
-        isPausedSX = isPaused;
-        emit SXMaintenance(isPausedSX);
-    }
+	function setMaintenanceModeSX(bool isPaused) external onlyOwner {
+		isPausedSX = isPaused;
+		emit SXMaintenance(isPausedSX);
+	}
 
-    event MintrMaintenance(bool isPaused);
-    event SXMaintenance(bool isPaused);
+	event MintrMaintenance(bool isPaused);
+	event SXMaintenance(bool isPaused);
 }

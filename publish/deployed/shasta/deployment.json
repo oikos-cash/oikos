@@ -2,505 +2,1464 @@
 	"targets": {
 		"SafeDecimalMath": {
 			"name": "SafeDecimalMath",
+<<<<<<< Updated upstream
 			"address": "41ee6fa20f26a2ac860408159c33bd4ee896a387a0",
 			"source": "SafeDecimalMath",
 			"link": "https://shasta.tronscan.org/#/address/TXhwZ7bQgKvktpf5KXzH3JhssZBk8W2gUF",
 			"timestamp": "2020-07-04T18:55:07.269Z",
+=======
+			"address": "418515eedd5616ea8bf56c2318c5a48f8ea203edc2",
+			"source": "SafeDecimalMath",
+			"link": "https://shasta.tronscan.org/#/address/TN6u9WSsCMgsNpYcoSBffRJBi2pnFqUd2J",
+			"timestamp": "2020-04-30T20:04:36.040Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ExchangeRates": {
 			"name": "ExchangeRates",
+<<<<<<< Updated upstream
 			"address": "4175f701c43172053130582da82819e8320c7f1377",
 			"source": "ExchangeRates",
 			"link": "https://shasta.tronscan.org/#/address/TLiwxqsb7YN32h9Bow9sznmaadTYB91UCY",
 			"timestamp": "2020-07-04T18:55:17.653Z",
+=======
+			"address": "4140cb1439d43b1d4213b32febfd1007796bc2117e",
+			"source": "ExchangeRates",
+			"link": "https://shasta.tronscan.org/#/address/TFsoXWhp4myq7SwPSH7Ln6kaTRQUAT4YXB",
+			"timestamp": "2020-04-30T20:04:41.774Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"RewardEscrow": {
 			"name": "RewardEscrow",
+<<<<<<< Updated upstream
 			"address": "41a65ae14dddd68626e91d9205df6866a1ef581863",
 			"source": "RewardEscrow",
 			"link": "https://shasta.tronscan.org/#/address/TR8p3MyjHmFnDgkYMLRGoEUA6VVNyZ3xMi",
 			"timestamp": "2020-07-04T18:55:27.599Z",
+=======
+			"address": "4152849256f6bb07a2852d108d526c34060ad96b8b",
+			"source": "RewardEscrow",
+			"link": "https://shasta.tronscan.org/#/address/THVXE2ajsR6c6vNtYGSCn9mjhr61pzmWNE",
+			"timestamp": "2020-04-30T20:04:46.669Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthetixEscrow": {
 			"name": "SynthetixEscrow",
+<<<<<<< Updated upstream
 			"address": "41fcdbee8ee585a6ccffa7e63a32fa6e395b8fda58",
 			"source": "SynthetixEscrow",
 			"link": "https://shasta.tronscan.org/#/address/TZ2CkXwnoVykZFeqTVXKH2okAjEU8DWqbc",
 			"timestamp": "2020-07-04T18:55:33.296Z",
+=======
+			"address": "4155bdf85d3afe325ee4b0189e9f1e257fac2629a8",
+			"source": "SynthetixEscrow",
+			"link": "https://shasta.tronscan.org/#/address/THna1ivN7gEHrpCVMVR9o23qg9K7XB81Cd",
+			"timestamp": "2020-04-30T20:04:51.537Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthetixState": {
 			"name": "SynthetixState",
+<<<<<<< Updated upstream
 			"address": "4129a77621b531276f145eab630aa6396231375b65",
 			"source": "SynthetixState",
 			"link": "https://shasta.tronscan.org/#/address/TDmTKMEewdZEPuMnUb7twByACJF77gB3uk",
 			"timestamp": "2020-07-04T18:55:41.442Z",
+=======
+			"address": "412f32484d1dd9941523698ef2f94474af3812d661",
+			"source": "SynthetixState",
+			"link": "https://shasta.tronscan.org/#/address/TEGkzkzVHW8og7G4BNhedKTBSxtfjMfNA6",
+			"timestamp": "2020-04-30T20:04:56.666Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxyFeePool": {
 			"name": "ProxyFeePool",
+<<<<<<< Updated upstream
 			"address": "41e17940732497d6d6dc04d5354246f24f251dfeb1",
 			"source": "Proxy",
 			"link": "https://shasta.tronscan.org/#/address/TWXQHwWUENNPpDDJaGzrRuwGshTfoJi2af",
 			"timestamp": "2020-07-04T18:55:47.178Z",
+=======
+			"address": "41e1000f4a2b3247d6dabd9a17a0076f7ef247bafd",
+			"source": "Proxy",
+			"link": "https://shasta.tronscan.org/#/address/TWUu7NT6UWdTS6xRXZtBiQA1wGv4h5Hm3L",
+			"timestamp": "2020-04-30T20:05:01.140Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"DelegateApprovals": {
 			"name": "DelegateApprovals",
+<<<<<<< Updated upstream
 			"address": "41ca84fc99c52093d10655843ea6a51a1432c0cb8e",
 			"source": "DelegateApprovals",
 			"link": "https://shasta.tronscan.org/#/address/TUS2otTvzqY5XUoN1qjZ6mJhsM4ntW13gn",
 			"timestamp": "2020-07-04T18:55:52.934Z",
+=======
+			"address": "41e31715368412b9f79c1ec2af1422f34837a4eaac",
+			"source": "DelegateApprovals",
+			"link": "https://shasta.tronscan.org/#/address/TWfx3Rtbyr9BEnBYLQZJZwXLxySeaeg69Q",
+			"timestamp": "2020-04-30T20:05:05.464Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"FeePoolEternalStorage": {
 			"name": "FeePoolEternalStorage",
+<<<<<<< Updated upstream
 			"address": "41be0aeebec8a9d2dee7ff1a0b397670aaac5839f2",
 			"source": "FeePoolEternalStorage",
 			"link": "https://shasta.tronscan.org/#/address/TTJ4V7k1HuJMwAG8W6Jwv15YyAH9rFnjvt",
 			"timestamp": "2020-07-04T18:56:02.361Z",
+=======
+			"address": "41417390060bda4dfcda7eb522ae096ca6d31b2371",
+			"source": "FeePoolEternalStorage",
+			"link": "https://shasta.tronscan.org/#/address/TFwHMxVo6bPrUjKYebjNYcvZtTmewRYBFm",
+			"timestamp": "2020-04-30T20:05:10.394Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"FeePool": {
 			"name": "FeePool",
+<<<<<<< Updated upstream
 			"address": "415ba46464f27b4a8464d09a70c5b771d2343c952e",
 			"source": "FeePool",
 			"link": "https://shasta.tronscan.org/#/address/TJKmRgbQhCxrwALLV6aYeH4d4GxxsJbZPB",
 			"timestamp": "2020-07-04T18:56:11.125Z",
+=======
+			"address": "4164152894c080d2de0e2f6277b6f46bbc66d67412",
+			"source": "FeePool",
+			"link": "https://shasta.tronscan.org/#/address/TK6PvMwEzDtbTLLk9iX8LMuKsq2nAFS5S7",
+			"timestamp": "2020-04-30T20:05:16.216Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"FeePoolState": {
 			"name": "FeePoolState",
+<<<<<<< Updated upstream
 			"address": "4149a8a98c6234a58f19d5223d8319c34266e8e4d8",
 			"source": "FeePoolState",
 			"link": "https://shasta.tronscan.org/#/address/TGggNvaTBpqwNnAJkvNY6EpGmZLCL9kiSj",
 			"timestamp": "2020-07-04T18:56:28.604Z",
+=======
+			"address": "417c162658b1a2d758d402be40e771c206d6708a15",
+			"source": "FeePoolState",
+			"link": "https://shasta.tronscan.org/#/address/TMHKKqhRreR73eUfLXxFTh52sxhcnppF1K",
+			"timestamp": "2020-04-30T20:05:27.865Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"RewardsDistribution": {
 			"name": "RewardsDistribution",
+<<<<<<< Updated upstream
 			"address": "41dd3287f98df9c94670cf0830186cde5fe6a42ea9",
 			"source": "RewardsDistribution",
 			"link": "https://shasta.tronscan.org/#/address/TW8nsRHREYxA8iWPdcwmSqcuVeCRqriopc",
 			"timestamp": "2020-07-04T18:56:38.356Z",
+=======
+			"address": "41939440369e566e8ea1621e2ca9811d3e4150cfbc",
+			"source": "RewardsDistribution",
+			"link": "https://shasta.tronscan.org/#/address/TPRXvuXvDLHBL4acSLY1ZmCBuP8r9KPpvP",
+			"timestamp": "2020-04-30T20:05:35.181Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SupplySchedule": {
 			"name": "SupplySchedule",
+<<<<<<< Updated upstream
 			"address": "41d82f9447c2d54902d359d02c76f55f2f9ce67a0f",
 			"source": "SupplySchedule",
 			"link": "https://shasta.tronscan.org/#/address/TVgHxMdd22YXz8yiVjyP28zwqhPxcnpsae",
 			"timestamp": "2020-07-04T18:56:46.546Z",
+=======
+			"address": "41a82abd548ec51ad66029b2aa238177ac91df2539",
+			"source": "SupplySchedule",
+			"link": "https://shasta.tronscan.org/#/address/TRJPitE2JUgc7r4BC2FK3uaVRBUL8P66cH",
+			"timestamp": "2020-04-30T20:05:41.651Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxySynthetix": {
 			"name": "ProxySynthetix",
+<<<<<<< Updated upstream
 			"address": "417849dd1f0744ce432d2659b15492d88822429343",
 			"source": "Proxy",
 			"link": "https://shasta.tronscan.org/#/address/TLwEaDr4ucZqfYdXFJfippbCTxWwgBqsq1",
 			"timestamp": "2020-07-04T18:56:53.303Z",
+=======
+			"address": "41f744f277a587e457a3dc47505de9f61003e066e2",
+			"source": "Proxy",
+			"link": "https://shasta.tronscan.org/#/address/TYWeVyLvWsTAfto2LgqDhDY73MYeBXPZaE",
+			"timestamp": "2020-04-30T20:05:46.114Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStateSynthetix": {
 			"name": "TokenStateSynthetix",
+<<<<<<< Updated upstream
 			"address": "41a862b21a2f9d7d479a897b83a1a0a4256b5f27e2",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TRKYknULQ487Snq9n8wtUJSUHg31idXWke",
 			"timestamp": "2020-07-04T18:56:58.935Z",
+=======
+			"address": "41a5fd0bdccc2a3716c4aca98b8a73c4e053f81a5b",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TR6sdgKkiAAaydfEqnAwpDrk9H5VsGMxZJ",
+			"timestamp": "2020-04-30T20:05:50.435Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"Synthetix": {
 			"name": "Synthetix",
+<<<<<<< Updated upstream
 			"address": "41343960a5f9cb20384209a26270af864dc97f3a86",
 			"source": "Synthetix",
 			"link": "https://shasta.tronscan.org/#/address/TEjLshGMbXVeTwFFALBfvGX1s2GtcGfYhk",
 			"timestamp": "2020-07-04T18:57:08.182Z",
+=======
+			"address": "41e25b83f94ac376e695cc438b1ebfd06f23d09c7a",
+			"source": "Synthetix",
+			"link": "https://shasta.tronscan.org/#/address/TWc5M2GVCCCeFgjTUUbtAoE29ZeyB5jekA",
+			"timestamp": "2020-04-30T20:05:56.330Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"EscrowChecker": {
 			"name": "EscrowChecker",
+<<<<<<< Updated upstream
 			"address": "41595c401594ca75e9ddfb5fa8e2362c681132352f",
 			"source": "EscrowChecker",
 			"link": "https://shasta.tronscan.org/#/address/TJ7heoBtJhVxRgG1D8gnxfprse3YxFYcgd",
 			"timestamp": "2020-07-04T18:57:33.275Z",
+=======
+			"address": "416171c2f20df63deb142340a362e9ce042952c754",
+			"source": "EscrowChecker",
+			"link": "https://shasta.tronscan.org/#/address/TJrSpxKNv9NwcusQiy3b9L3VuDmfckbc9r",
+			"timestamp": "2020-04-30T20:06:12.026Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxyERC20": {
 			"name": "ProxyERC20",
+<<<<<<< Updated upstream
 			"address": "4147f8b2f39947cec7714dbd259f2d996c475b9d21",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TGXkubCayFLyA9HRV39MpDkdkWV8DyStG1",
 			"timestamp": "2020-07-04T18:57:51.328Z",
+=======
+			"address": "4134a9683f19e82c5f287a2b455f12b7f2c68ae42e",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TEmf5esF14haqLZwikKreZ2F1HtoF45aNk",
+			"timestamp": "2020-04-30T20:06:24.091Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStateODR": {
 			"name": "TokenStateODR",
+<<<<<<< Updated upstream
 			"address": "4148b24fcc9590e658e550b5c11759244ea700041f",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TGbbGBjtNouVT9B8qW9yA7HQkJH1zoJzfg",
 			"timestamp": "2020-07-04T18:58:07.709Z",
+=======
+			"address": "41b4ad3d01a11d0e3904fcdf605597a35e19d17809",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TSSYAPymiKJv4R8eVmvEei1MqdDhKi7tzk",
+			"timestamp": "2020-04-30T20:06:35.759Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxyODR": {
 			"name": "ProxyODR",
+<<<<<<< Updated upstream
 			"address": "41a46d39b1c4cbbabce81eb53d6a973c68576205ae",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TQxcfdYTXjPhRtpk1PuVmmP7hNKC1q5axt",
 			"timestamp": "2020-07-04T18:58:14.261Z",
+=======
+			"address": "4167ba68aaeeb5cb1f1f12c1142ce76266955a30cf",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TKRfujQvB9rhLY4WeoZPeazHDwjAmFzhR9",
+			"timestamp": "2020-04-30T20:06:40.510Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthODR": {
 			"name": "SynthODR",
+<<<<<<< Updated upstream
 			"address": "41d0259d7cbc6cefd7495a2cde855ef035f19ef252",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TUwncWT5dE96Zs28uTc5kfR4k6QRhbK73Y",
 			"timestamp": "2020-07-04T18:58:22.357Z",
+=======
+			"address": "41a3dcffd79c1ffe22695f1d2141a8975359f03a57",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TQudtdi8gaL7rVUg26xbnWfJaPoAcrXuo5",
+			"timestamp": "2020-04-30T20:06:45.839Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesEUR": {
 			"name": "TokenStatesEUR",
+<<<<<<< Updated upstream
 			"address": "4127cb7274abb36fd60636025422c55c44371ad144",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TDbd5HuEgrhUjR7yvo21Jqp8ucw4fFejHs",
 			"timestamp": "2020-07-04T18:58:33.718Z",
+=======
+			"address": "41e9212890b4464724ce6adbfef480d8e91fc638cf",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TXDtAePrCNxwFYcq9QxRkH3MfqbH8AnXYH",
+			"timestamp": "2020-04-30T20:06:56.798Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysEUR": {
 			"name": "ProxysEUR",
+<<<<<<< Updated upstream
 			"address": "41e94a88e29e2e6090e03b7316d9e60bcf89b9fdf4",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TXEjjWz5KE9oJG2hP2dLXN54gjKtUJ3j2o",
 			"timestamp": "2020-07-04T18:58:42.414Z",
+=======
+			"address": "41cb2f0981b13dafb53a5d12dc7f370b9e89c3b0d8",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TUVYXCSQRTUUYs89narNnxnprzChj5o6Ew",
+			"timestamp": "2020-04-30T20:07:01.566Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsEUR": {
 			"name": "SynthsEUR",
+<<<<<<< Updated upstream
 			"address": "415a601749a5e471bbfb084e9f97b6d4e4fd02f41c",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TJD4vqk5W1LSQqLbthu7HWazi7hBhEEd9K",
 			"timestamp": "2020-07-04T18:58:51.000Z",
+=======
+			"address": "414d491b2369b1518fbcecdefffdb388f1612e8f1a",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TH1rcKmtHe3DRWYGMNvd5u6jszpojnTwdq",
+			"timestamp": "2020-04-30T20:07:06.759Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesJPY": {
+			"name": "TokenStatesJPY",
+			"address": "4166764ae4b21fa6887e94b1f081178667f5731941",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TKJydjfDQXq1zmiVA2GEMfr3bt3czYkTzh",
+			"timestamp": "2020-04-30T20:07:17.496Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysJPY": {
+			"name": "ProxysJPY",
+			"address": "41b1bd83fa043a13d9c8392bfd8fcd8ba8a1939065",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TSB1dnNe8hHxWrPsECy13fibPZQRTbkuNd",
+			"timestamp": "2020-04-30T20:07:22.275Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsJPY": {
+			"name": "SynthsJPY",
+			"address": "411c3fc64d6afc288b9964c9007f2f5ea3a10ce7ec",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TCYaKZvWpbuf7F9HfGp6iXHAhKPR7iizM3",
+			"timestamp": "2020-04-30T20:07:28.703Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesUSD": {
 			"name": "TokenStatesUSD",
+<<<<<<< Updated upstream
 			"address": "4106323c9dceda6f054711bb0fd9e8cf310a95bda4",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TAXyEiswHvcn9MQtmsc45b3KPftFRDmSAi",
 			"timestamp": "2020-07-04T18:59:05.560Z",
+=======
+			"address": "41c042c45d2a02a92235e782dd7b0a256a660f7912",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TTVniwq9aoEgdUfXeHFZqyCpHTGRCw5gDJ",
+			"timestamp": "2020-04-30T20:07:39.849Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysUSD": {
 			"name": "ProxysUSD",
+<<<<<<< Updated upstream
 			"address": "41b9b90a644272f4f5761a8bbad4521b57f306bfef",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TSuDgPmaWieqr6ChKZP2mKcgZEbM2rNfrf",
 			"timestamp": "2020-07-04T18:59:11.546Z",
+=======
+			"address": "41b5d7aced7d45d849abd242aa236392182e181add",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TSYhgBCaoVUjwkxPDBWiBsXjUJ52wgYhKz",
+			"timestamp": "2020-04-30T20:07:44.634Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsUSD": {
 			"name": "SynthsUSD",
+<<<<<<< Updated upstream
 			"address": "4167956347a6c7edd8d4b16619704d37dd79d5fd98",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TKQuZTuSm1iMkMsqnDWyt2q8nXFVw7wRVz",
 			"timestamp": "2020-07-04T18:59:18.613Z",
+=======
+			"address": "41c2078186ea6ae3bc3792e99c790923b246510be2",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TTf95oDfaGVtYZ5yBLvVd44vVUJwh48TwB",
+			"timestamp": "2020-04-30T20:07:49.831Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesAUD": {
 			"name": "TokenStatesAUD",
+<<<<<<< Updated upstream
 			"address": "412f4ea76dab30bed77cd1c56e3be06805695ed8e0",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TEHLz3y1Xw2b5f6dxp9GSkHqReZHCq4wdK",
 			"timestamp": "2020-07-04T18:59:34.385Z",
+=======
+			"address": "41f8889db1f2eb1f7c79112d9488d6f45dd28af925",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TYdLEsvWiAgC6LpsncoG128Rtiwr1TRa6k",
+			"timestamp": "2020-04-30T20:08:00.912Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysAUD": {
 			"name": "ProxysAUD",
+<<<<<<< Updated upstream
 			"address": "416f7197da804ebc063da026f5f76daa74e5b50fd1",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TL8U5wjg9VkfTrWvMJnwmNkqSdvXggaHNA",
 			"timestamp": "2020-07-04T18:59:39.543Z",
+=======
+			"address": "41805cf47e1b81e01ef98c14474fefbe9fec581583",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TMfvrF4re7ToRTE4bFi8gToPhYvtatckri",
+			"timestamp": "2020-04-30T20:08:05.745Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsAUD": {
 			"name": "SynthsAUD",
+<<<<<<< Updated upstream
 			"address": "41f2f444f641b15d3658f9139b97ea86258394439a",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TY7q9chASoUS2EjHgiYJDo2UC8pEsAoWwr",
 			"timestamp": "2020-07-04T18:59:46.389Z",
+=======
+			"address": "418571f92672878190b26c5106f4e66542d7f4083a",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TN8oQa97Bykpi3RMcsW5RQFXzG7Mdprdrm",
+			"timestamp": "2020-04-30T20:08:10.950Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesGBP": {
 			"name": "TokenStatesGBP",
+<<<<<<< Updated upstream
 			"address": "41a8270d2227c101e729fdb9a3a5d8f24552530217",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TRJKJcq84HGkoHEVXfQpyfT2FXbc5NSp7X",
 			"timestamp": "2020-07-04T19:00:03.081Z",
+=======
+			"address": "41b09d32f02da06e851e3f130f5530bfeb73eb1772",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TS54FCQuvhk3C6UUwKxBNhUKDf1gtk93rm",
+			"timestamp": "2020-04-30T20:08:22.140Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysGBP": {
 			"name": "ProxysGBP",
+<<<<<<< Updated upstream
 			"address": "41531fc6a0093f79abfae0d4b6d668dda4e4744387",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/THYj9ooUQCD8iv8suxtownKdSoiRncf7dA",
 			"timestamp": "2020-07-04T19:00:09.991Z",
+=======
+			"address": "41f79eee660dc612a969fa1508fcdecc8d4548f40f",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TYYWJBFfFLhHqyoHZjMChHfb8yzFbKD8wu",
+			"timestamp": "2020-04-30T20:08:27.007Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsGBP": {
 			"name": "SynthsGBP",
+<<<<<<< Updated upstream
 			"address": "41447ab15ad4b4e9312694c7e2f974f7c8d98748a0",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TGDHvwwjcwMp58fLLD9MmdvD5qaVENFRKe",
 			"timestamp": "2020-07-04T19:00:17.929Z",
+=======
+			"address": "41ed492fc1dbc617d982053f2b5967a6f0bb8998a3",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TXbrpcYKZCThEimpNHnyE5qPE8DVoqFL8K",
+			"timestamp": "2020-04-30T20:08:32.298Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesCHF": {
 			"name": "TokenStatesCHF",
+<<<<<<< Updated upstream
 			"address": "418313c34925254f2a74e292fee53b8d5645112167",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TMvHCLMvdB6yvV9FCvH3ir73DZkb8SBwdj",
 			"timestamp": "2020-07-04T19:00:34.594Z",
+=======
+			"address": "41af63732dfa3a731f3a969f7f5901011bb5f49c84",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TRxaPXkHSaDyFCoKXkP3J57jhRnwbQXZBy",
+			"timestamp": "2020-04-30T20:08:43.279Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysCHF": {
 			"name": "ProxysCHF",
+<<<<<<< Updated upstream
 			"address": "4158a764b2ddb89819332bdc32783b383a749bc4f4",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TJ3xzdjoqAYvDT9JhEbHYys398g9u9heX1",
 			"timestamp": "2020-07-04T19:00:42.648Z",
+=======
+			"address": "416b7b362cc9515dbb0424d4dd428cec452a98d2a9",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TKmWuUhSfE15WL3kcawWVgMC1Jz6B619Ri",
+			"timestamp": "2020-04-30T20:08:48.035Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsCHF": {
 			"name": "SynthsCHF",
+<<<<<<< Updated upstream
 			"address": "417c1b9df6f9dc8f47c94fc6d86d9587bcaae554c9",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TMHRsiGCePjWs58U9rjQuJ8Xt1Dgp6VWHk",
 			"timestamp": "2020-07-04T19:00:49.600Z",
+=======
+			"address": "414d3cd93f3a58746709ba6a65ce7441e28fa8d39e",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TH1bvfbX1pcNYq9Uh2xY5yo6T8oxqRFcsD",
+			"timestamp": "2020-04-30T20:08:53.253Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesXAU": {
+			"name": "TokenStatesXAU",
+			"address": "41184228bf42e7d0ad0c6b1b5099985eec1af72a29",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TCBUUUwWkiScet3YycHirPaa3CrEmq79ug",
+			"timestamp": "2020-04-30T20:09:04.517Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysXAU": {
+			"name": "ProxysXAU",
+			"address": "41f9b79f669510a41232323d18f97f31fe16b4d85f",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TYjbE9hWxtrwups2EsVCCxWq3MTpCU4uQP",
+			"timestamp": "2020-04-30T20:09:09.463Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsXAU": {
+			"name": "SynthsXAU",
+			"address": "41b294beb2078be5f7a978ae1e5c45a958c4ebbfb1",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TSFTUBWGFjiESKMiTr37cQKSH9posaMArZ",
+			"timestamp": "2020-04-30T20:09:14.771Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesXAG": {
+			"name": "TokenStatesXAG",
+			"address": "41ac514f162631b7781db3d917d7ff42595ace0403",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TRgLdVofuUNsCm5RHZVS2eGfEFQmZjScTB",
+			"timestamp": "2020-04-30T20:09:26.154Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysXAG": {
+			"name": "ProxysXAG",
+			"address": "41ac279acf2a4bf6cc0679932e3b4934daeb5395ad",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TRfUfqaBwCuUSiUQDx6vjAzGfu6qTCii5b",
+			"timestamp": "2020-04-30T20:09:31.244Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsXAG": {
+			"name": "SynthsXAG",
+			"address": "41f3700b2084c709b2f87917086c07d571007e18ec",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TYAPRbBjbdaGyoBXQJVghPCMtjn55Ci8rW",
+			"timestamp": "2020-04-30T20:09:36.788Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesBTC": {
 			"name": "TokenStatesBTC",
+<<<<<<< Updated upstream
 			"address": "4188300407fc01799a97cd72fc0cc1a0511b782f11",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TNPJRLhjyqwswFu97eC51YeAYdEmVNbwLL",
 			"timestamp": "2020-07-04T19:01:06.268Z",
+=======
+			"address": "41fad929a49a6567c9042e8dd103a85d169e666093",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TYqa5k4gzar1QB5SryNaCAm4Q4XfD3Vtka",
+			"timestamp": "2020-04-30T20:09:47.773Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysBTC": {
 			"name": "ProxysBTC",
+<<<<<<< Updated upstream
 			"address": "419fcb2544b2d0c1a2da3321841c71d6b4fce0d639",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TQY7oMyCMddfabBVvMK9qSJdTZ9j6ATTAb",
 			"timestamp": "2020-07-04T19:01:12.730Z",
+=======
+			"address": "411ea8adca8ef5708ec1b518f22e68b4f227088efb",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TCmKLpwemuqDVGFpDYLaWhteqGEhGrX3f9",
+			"timestamp": "2020-04-30T20:09:52.679Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsBTC": {
 			"name": "SynthsBTC",
+<<<<<<< Updated upstream
 			"address": "41ebb19e1470b5010fbf464e1e7622111dcc912923",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TXTSaDgBLmgPYNkQnvMcVVTLwDuPkwCXLd",
 			"timestamp": "2020-07-04T19:01:21.315Z",
+=======
+			"address": "4146f3d6b4f4c91bdd7959fd3061fa3dcc6d709e4f",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TGSNQhNixGLo9z5HTBy3Mo5fiS53Wbha9A",
+			"timestamp": "2020-04-30T20:09:58.050Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesETH": {
 			"name": "TokenStatesETH",
+<<<<<<< Updated upstream
 			"address": "4144df9b8507de382c2de03fa7decdea0a7c742cf4",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TGFNpdCEmisUo199pDh6zXA3wZCESKcU5A",
 			"timestamp": "2020-07-04T19:01:36.993Z",
+=======
+			"address": "4191a86fc15c77eba3b39c343aa7281f604484dde8",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TPFNm3tiRnnZMeLFxi4ch6B3EHAQdZXiF4",
+			"timestamp": "2020-04-30T20:10:08.782Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysETH": {
 			"name": "ProxysETH",
+<<<<<<< Updated upstream
 			"address": "418655cadaf41a9249518d097eadfda68d36c6505f",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TNDWKj14Di2JKtgNzPPZztQMcPjNQWVyWD",
 			"timestamp": "2020-07-04T19:01:42.845Z",
+=======
+			"address": "415694e3a539c47cd324f788aa7f664619675b38d6",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/THs1UZZNVJWJb9LpfWinDMQDpPQYWPnzU1",
+			"timestamp": "2020-04-30T20:10:13.540Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsETH": {
 			"name": "SynthsETH",
+<<<<<<< Updated upstream
 			"address": "413342528636354e779cc71dfa36c73fbe13a852f8",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TEeEuzzjjttNF9KsC9TPdrPe2rtswxQG9L",
 			"timestamp": "2020-07-04T19:01:52.627Z",
+=======
+			"address": "416614dd00b81fe4ed0ac6547bcf7b70ebe71e4e99",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TKGxvESvHBiy36s7AkrBrxGEJQFRPW5yKy",
+			"timestamp": "2020-04-30T20:10:18.697Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesBTT": {
+			"name": "TokenStatesBTT",
+			"address": "41a0182ec714fd918013f1f791b25650af57c7cb88",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TQZi5znQgexeVR43Z2zE3p3AsTnACwKyYx",
+			"timestamp": "2020-04-30T20:10:29.441Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysBTT": {
+			"name": "ProxysBTT",
+			"address": "41884161fc21078574850076ee1aad86b9c2184b71",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TNPfE2BrzyLviSLJiNJ13tjekXWSC2pu3k",
+			"timestamp": "2020-04-30T20:10:34.258Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsBTT": {
+			"name": "SynthsBTT",
+			"address": "416efb54d986a77aa594b638d14649083a71073130",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TL62QyWvxLZNvaZspA4ChswLtQF9VGiPNv",
+			"timestamp": "2020-04-30T20:10:39.722Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesBNB": {
+			"name": "TokenStatesBNB",
+			"address": "415e9ee5dd295677c745d8e1e4dfe532f3c86b7ed7",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TJbWsWbdtzf4KdECyMaPimJ9WiyyxQvzHS",
+			"timestamp": "2020-04-30T20:10:50.566Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysBNB": {
+			"name": "ProxysBNB",
+			"address": "41b318414b29641e7ea71ce7d91fcff375c7e1800f",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TSJB1fez6SzTiDJ2uxLRxSdSHsYTd14Whq",
+			"timestamp": "2020-04-30T20:10:55.414Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsBNB": {
+			"name": "SynthsBNB",
+			"address": "412179fd2ff3a8e99f297aab387db5fc72773d182c",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TD2DSLMu8hv75aSeYiF4dquHm5ZkhMpSr8",
+			"timestamp": "2020-04-30T20:11:00.608Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesMKR": {
+			"name": "TokenStatesMKR",
+			"address": "416b9e9cd20efaf627818c6b94a7cd57ebe602e075",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TKnFKBQDpwFN91MZRDr6btRAPjfsYAKwHS",
+			"timestamp": "2020-04-30T20:11:11.371Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysMKR": {
+			"name": "ProxysMKR",
+			"address": "413648247200c4b462cc96177c12e493536c52a30c",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TEvDuxUJ9R888buNDZh2Gsi26vKGMgxgwg",
+			"timestamp": "2020-04-30T20:11:16.357Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsMKR": {
+			"name": "SynthsMKR",
+			"address": "41fc0f1f0a2f0c0ffd9764445431660a654c260203",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TYwyQ3TA2CthcgWVCzivvU6PAPu5chqRJy",
+			"timestamp": "2020-04-30T20:11:21.556Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStatesTRX": {
 			"name": "TokenStatesTRX",
+<<<<<<< Updated upstream
 			"address": "413b1a52320842194b1b5c9e5a25111a2eafc8256e",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TFMiQCQLy4xKw2G8F7BwD88qyfriTnvgjz",
 			"timestamp": "2020-07-04T19:02:05.103Z",
+=======
+			"address": "41cf5726c0e902aeacd4de160add3d7186871e50d5",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TUsXH9mcv7AMdRBbCx9b7LqkoJbNEDo55B",
+			"timestamp": "2020-04-30T20:11:32.370Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxysTRX": {
 			"name": "ProxysTRX",
+<<<<<<< Updated upstream
 			"address": "41a538ed7020934bcd2bd697307e7d1f0b13e687bf",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TR2ph6u86QHy7GUo8rv2eNyqG3qNWE8BNZ",
 			"timestamp": "2020-07-04T19:02:12.053Z",
+=======
+			"address": "4188567f1b64c541eecba63a2eb7a850d329210086",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TNQ6X2kK1aiCPt2fwEUVB53fQbfvQWxjDT",
+			"timestamp": "2020-04-30T20:11:37.271Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthsTRX": {
 			"name": "SynthsTRX",
+<<<<<<< Updated upstream
 			"address": "41da24ecf5ab26fda03cd8ecc0ce439608be6692e4",
 			"source": "Synth",
 			"link": "https://shasta.tronscan.org/#/address/TVreYWqrCyKWgTNjkDaTKs7W9M87GuCTkj",
 			"timestamp": "2020-07-04T19:02:20.369Z",
+=======
+			"address": "418d17b061d06fb03c236b59db761b6c220bb0d06b",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TNqEf3gr8XNAMN9c7GWnk4TxLFpuyxpkET",
+			"timestamp": "2020-04-30T20:11:42.629Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesXTZ": {
+			"name": "TokenStatesXTZ",
+			"address": "41db088924e83467cb9bbddda94cc7b868b764e51d",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TVwMD9C5wfX7S5VfmAwyHmq6WtzFkHMmwV",
+			"timestamp": "2020-04-30T20:11:53.497Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysXTZ": {
+			"name": "ProxysXTZ",
+			"address": "41d5c9691b41ba986e7ca62813877f0686bfe7fe29",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TVTcDAriWjMxaUCLgEMDNhdXWEo53M6MaW",
+			"timestamp": "2020-04-30T20:11:58.318Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsXTZ": {
+			"name": "SynthsXTZ",
+			"address": "4185e1cb3ee5058b039011d95a29f1b2fc2f6dd259",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TNB7N1WefbPS2ugB6Yk65Jiqo4ygZJKMb5",
+			"timestamp": "2020-04-30T20:12:03.570Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesXRP": {
+			"name": "TokenStatesXRP",
+			"address": "41ff483c3b5ad91908a2f72549e09dbf94b8096d1e",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TZF1qyGrcxobQjNahpaoMN6rqchRWzRWW3",
+			"timestamp": "2020-04-30T20:12:14.483Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysXRP": {
+			"name": "ProxysXRP",
+			"address": "41825d3c1bf759d7463d236c7dc8de2c28f33a95b5",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TMrWY4hPRitHD7Ci4bWJ6e35xwHFmq4pKi",
+			"timestamp": "2020-04-30T20:12:19.224Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsXRP": {
+			"name": "SynthsXRP",
+			"address": "4154c6917007babc663501eaf839be666ed1fe6cff",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/THhTdvjiHY7Wf7yJgeoZrAPUiXrxsZPSUp",
+			"timestamp": "2020-04-30T20:12:24.460Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesLTC": {
+			"name": "TokenStatesLTC",
+			"address": "419e18211c2e026f14826392f5dce7db92890dcf3f",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TQP8fuNuLZb5wLBAvJ6fnbLHkJB6bfrCy6",
+			"timestamp": "2020-04-30T20:12:35.978Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysLTC": {
+			"name": "ProxysLTC",
+			"address": "41a42a8b1dee7a337684815b4f460b2c6ef3e809e8",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TQwEnVGba5DPw5SBmTpYPYiHx4AwQVSe2u",
+			"timestamp": "2020-04-30T20:12:40.590Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsLTC": {
+			"name": "SynthsLTC",
+			"address": "4183e8753ca6bd098997af9866ee5d0d190f397996",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TMzfzehSv9PweZiops8YxcQYFSTzcxDHsa",
+			"timestamp": "2020-04-30T20:12:45.345Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesLINK": {
+			"name": "TokenStatesLINK",
+			"address": "41e3e28ff1a9eb9e86f7713efac125bada1204625a",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TWk9oRmJMAuwqV15dpqwyEhFDdRnPdC9s1",
+			"timestamp": "2020-04-30T20:12:55.034Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysLINK": {
+			"name": "ProxysLINK",
+			"address": "412dafacbf089ac351e2dcfb08e02127a94c278d48",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TE8mrnm1T6hyYDoLoDT8rDKAU43xMDfJoG",
+			"timestamp": "2020-04-30T20:12:59.563Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsLINK": {
+			"name": "SynthsLINK",
+			"address": "411d86ad2342e4328838d84fd053936c3382657222",
+			"source": "Synth",
+			"link": "https://shasta.tronscan.org/#/address/TCfKw6ZsGvZjuXEbztHLHbVMLPGj9rNFLo",
+			"timestamp": "2020-04-30T20:13:04.858Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesCEX": {
+			"name": "TokenStatesCEX",
+			"address": "418cc3ee4cb0eef8ce68d40fbf143f4e75dcbbbad6",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TNoWKRtUriKHv1Fh1gxVSCeV68QjabQs17",
+			"timestamp": "2020-04-30T20:13:15.487Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysCEX": {
+			"name": "ProxysCEX",
+			"address": "41c14fad141a84eb073d2c438640aab1fb8df996d3",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TTbLs5EurhDCQLfAzfKq29UotdHZuYoTZk",
+			"timestamp": "2020-04-30T20:13:20.235Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsCEX": {
+			"name": "SynthsCEX",
+			"address": "41235ec7373fe840c894ddaa562a0b34649e40cf91",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TDCEC5R3jhiQtPRHbCyAbeuMvoLCYsgMBK",
+			"timestamp": "2020-04-30T20:13:25.440Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStatesDEFI": {
+			"name": "TokenStatesDEFI",
+			"address": "41bd20ff46b0960fb9781a5593fcf8340d6d7a1910",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TTDEEzsp5qcjiKRJnoKkU3pwcTBJnkvGFg",
+			"timestamp": "2020-04-30T20:13:36.680Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxysDEFI": {
+			"name": "ProxysDEFI",
+			"address": "415063c2c20bd31c4c60b536e31497cf93ecfc9767",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/THJGZuUK1Yn6rjzkBcUXNp1MGcpTZJKw7S",
+			"timestamp": "2020-04-30T20:13:41.602Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthsDEFI": {
+			"name": "SynthsDEFI",
+			"address": "4110a09ba88ba20f665d90ef2b38932ceaea81333e",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TBV8DNSsuJinAvbD71Mu9uMQYZz8UrfmA5",
+			"timestamp": "2020-04-30T20:13:46.941Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStateiBTC": {
 			"name": "TokenStateiBTC",
+<<<<<<< Updated upstream
 			"address": "411b29cc1bddfcf877a1528cb0c09f9f351a26961c",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TCSqKNAeQJ3PcwAaa1TaSJAFmtLvxuKWkq",
 			"timestamp": "2020-07-04T19:02:38.238Z",
+=======
+			"address": "41103fbf323a309bc9c307921480acd66d238e1784",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TBT8BLYYRXoLDe6AektpyMnpqX4viQ9m8e",
+			"timestamp": "2020-04-30T20:13:58.393Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxyiBTC": {
 			"name": "ProxyiBTC",
+<<<<<<< Updated upstream
 			"address": "4117d772df1d74c996334644b29446f1f05c51493a",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TC9Ge7MbvZuFm4WLk4oUE3pXNnvaxEgr1h",
 			"timestamp": "2020-07-04T19:02:43.346Z",
+=======
+			"address": "4181436a4e6e2f3cf169d42d86556d609ee362e92b",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TMkgvu81xGADe6992Gzb9qBsPMP2T7aTby",
+			"timestamp": "2020-04-30T20:14:03.136Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthiBTC": {
 			"name": "SynthiBTC",
+<<<<<<< Updated upstream
 			"address": "418539741f4fffe6f61749470d79bd54a5ebb40c11",
 			"source": "PurgeableSynth",
 			"link": "https://shasta.tronscan.org/#/address/TN7dhX3L8kzjGpE3cFK9G9Y6PxBhmmG4cs",
 			"timestamp": "2020-07-04T19:02:51.179Z",
+=======
+			"address": "41eaa48a4c9c4ff810c166069c2f3f88e4d028e785",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TXMtEQL2nbddYfWg6UkcTe1dKQX2Vt5U3P",
+			"timestamp": "2020-04-30T20:14:08.465Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStateiTRX": {
 			"name": "TokenStateiTRX",
+<<<<<<< Updated upstream
 			"address": "41c4091cbbb866cd12a09435420b29486a52d717a8",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TTqkMncaHYDL4GVPVx4TePJYmhnCYEVEL4",
 			"timestamp": "2020-07-04T19:03:08.844Z",
+=======
+			"address": "412906ee9c6d83c44da9db69a177fc5fe89cfa0ea8",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TDi91aBtgPGUvc5hSUFZyUHJ2HcZ6nrqjK",
+			"timestamp": "2020-04-30T20:14:21.040Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxyiTRX": {
 			"name": "ProxyiTRX",
+<<<<<<< Updated upstream
 			"address": "4184b8316d53dfbe067d91b0594fefdab16f571967",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TN4xrLfK33Zdsm1M7HULaTbrfcVfx7KmjE",
 			"timestamp": "2020-07-04T19:03:14.750Z",
+=======
+			"address": "4122442f541546c33fbb762b89a4443d7cd4528238",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TD6Pf9dFx26fqDP2npY9tnW9FzBG2TdnzV",
+			"timestamp": "2020-04-30T20:14:26.157Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthiTRX": {
 			"name": "SynthiTRX",
+<<<<<<< Updated upstream
 			"address": "41d150ab7c9e25bd0e4cde9ce2d53f587e16244115",
 			"source": "PurgeableSynth",
 			"link": "https://shasta.tronscan.org/#/address/TV3xsC7WQqQKHhEeUtFoyvvWavR9Byq5Fc",
 			"timestamp": "2020-07-04T19:03:22.116Z",
+=======
+			"address": "41249681dc117bb4c2988e3d727d363ef3cc81276e",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TDJfdPk7jjAyfQjExiVbMYEQ4Zg6cAQHy1",
+			"timestamp": "2020-04-30T20:14:31.375Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"TokenStateiETH": {
 			"name": "TokenStateiETH",
+<<<<<<< Updated upstream
 			"address": "413bd87f3cdddcf286a1445d9f595aada6e75cd104",
 			"source": "TokenState",
 			"link": "https://shasta.tronscan.org/#/address/TFReDrUY7nnsury7AADJDMMWSmYirHyyPd",
 			"timestamp": "2020-07-04T19:03:41.890Z",
+=======
+			"address": "411d5ded74ac773360d76cfe74100625fe37e58566",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TCeV7piQYKc22mmzvvW9ZnWBKYd9zqFVhU",
+			"timestamp": "2020-04-30T20:14:44.297Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ProxyiETH": {
 			"name": "ProxyiETH",
+<<<<<<< Updated upstream
 			"address": "41c65f8c5f3d52c1b7d24d5f6b16613779a60fe812",
 			"source": "ProxyERC20",
 			"link": "https://shasta.tronscan.org/#/address/TU47FragBrZuDqdAEZMPyBuFoLYoVdK63Z",
 			"timestamp": "2020-07-04T19:03:47.901Z",
+=======
+			"address": "41dec162e253956a27a62568975f276e125f518e1c",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TWH2gMkq9re28rjtKQFQGZveu3uKRMgmPJ",
+			"timestamp": "2020-04-30T20:14:49.058Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"SynthiETH": {
 			"name": "SynthiETH",
+<<<<<<< Updated upstream
 			"address": "41a27bcf0e780f035c6343aefcf6353403c783ae88",
 			"source": "PurgeableSynth",
 			"link": "https://shasta.tronscan.org/#/address/TQnLnXGrXPgorm3YpaVdu5LVe9qYGWma7F",
 			"timestamp": "2020-07-04T19:03:55.234Z",
+=======
+			"address": "4118e5e71a0b2f66c7a350764a808ec3d22a0d4a12",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TCErdaudHFfPGiM8Zj2H79ZqYCj6yhsapu",
+			"timestamp": "2020-04-30T20:14:54.297Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiBTT": {
+			"name": "TokenStateiBTT",
+			"address": "41a1e49a5ad0fc4edfb6302483b819117c99ab78b3",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TQjDeZ9Gk8PXtr8ZWj3aPPtv8w4WJ9RRue",
+			"timestamp": "2020-04-30T20:15:08.821Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiBTT": {
+			"name": "ProxyiBTT",
+			"address": "41f73edcb167b27d3ae861e68afa4bd986d2d61d72",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TYWXDB7Rmbqz2XManvHBjJeDAJf64LfhXG",
+			"timestamp": "2020-04-30T20:15:13.657Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiBTT": {
+			"name": "SynthiBTT",
+			"address": "41465c97785dfc12609936834be1097ad07b11cc53",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TGPFDsQVPGqbohNsPuTJnKQrZEhPpX2EhN",
+			"timestamp": "2020-04-30T20:15:19.439Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiBNB": {
+			"name": "TokenStateiBNB",
+			"address": "415c06c1508ca84bcf0d9212c2c52532d5e9892f8f",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TJMoG4aGRB4HD2xbHSaXPuQtw8weR6of4w",
+			"timestamp": "2020-04-30T20:15:33.496Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiBNB": {
+			"name": "ProxyiBNB",
+			"address": "4135754b4e07f33621b8d7036b85e681321526362e",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TEqsKy3WxSLDD8gtbSnngnmo9KeCmhDXRP",
+			"timestamp": "2020-04-30T20:15:38.313Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiBNB": {
+			"name": "SynthiBNB",
+			"address": "412c7cba5c263038f968352aae7f705ffbe35ecffc",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TE2S9kVh4bc7NxrHxZYXGYy3C7Vman6mAt",
+			"timestamp": "2020-04-30T20:15:43.830Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiMKR": {
+			"name": "TokenStateiMKR",
+			"address": "41b897f7dd73735f1c444d381c774f13720ac45dfb",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TSoFPHx18uo7dCgzLBvLxVyc6QJQhhfNGf",
+			"timestamp": "2020-04-30T20:15:56.396Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiMKR": {
+			"name": "ProxyiMKR",
+			"address": "419c6df55e231435cd15ac54f34586c68f7a39d629",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TQEL92rejNSjH3iUEeersDk9o5ZmztLoP5",
+			"timestamp": "2020-04-30T20:16:01.160Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiMKR": {
+			"name": "SynthiMKR",
+			"address": "41df8d94bc9df55ddb3f59fd5cad75baca6a0114d1",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TWMFJ4JUHg7D9wjZcaEk7cw3cxPpP3tAzu",
+			"timestamp": "2020-04-30T20:16:07.008Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiXTZ": {
+			"name": "TokenStateiXTZ",
+			"address": "41c2b6e1bab8719fb882b4a5d009bfea4630cf4b5f",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TTimB7z5Biojyi9G9vLap4uQAoiT7SEqxz",
+			"timestamp": "2020-04-30T20:16:19.945Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiXTZ": {
+			"name": "ProxyiXTZ",
+			"address": "417307cc55eccbeef0664b9ef1401038eda1341aa3",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TLTS3wsrPeQr7v5A8amY4sNPWe2tBJT9Ez",
+			"timestamp": "2020-04-30T20:16:24.759Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiXTZ": {
+			"name": "SynthiXTZ",
+			"address": "4115477606050486862cd1ce7295fbf5a39ba5c07f",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TBuioHb4SRUHaHUWLjWiZDYSyCU8MwV3no",
+			"timestamp": "2020-04-30T20:16:30.450Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiXRP": {
+			"name": "TokenStateiXRP",
+			"address": "4127aeedd33fe87779376b9f63ec4b2e626d916e63",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TDb2upZ7mP8vaBBddKLRtBfdNEB43qAGAm",
+			"timestamp": "2020-04-30T20:16:43.278Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiXRP": {
+			"name": "ProxyiXRP",
+			"address": "4142ec497b5746ea678696d81a394011a3f9cbb5b1",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TG54fEMVNep6g8AiTWrN9Vt5QqohkrR3YX",
+			"timestamp": "2020-04-30T20:16:48.056Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiXRP": {
+			"name": "SynthiXRP",
+			"address": "41a530c8c3f83a9c171d796c3837f7bf910b3e28eb",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TR2ewJKczTiupgSXxbhAdSvQT6zQ8B7TVP",
+			"timestamp": "2020-04-30T20:16:53.745Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiLINK": {
+			"name": "TokenStateiLINK",
+			"address": "4197a1d5496c1a1ffbd425204df0d6fd93a2e592a5",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TPnxuPZrEiRJf6PsdjigzRHqTSVk8FW9zc",
+			"timestamp": "2020-04-30T20:17:06.218Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiLINK": {
+			"name": "ProxyiLINK",
+			"address": "41d29f5491a02f5dccc352e48af6644c106d5da70d",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TVAsmow2ZPANizSShQgMfLX2VVyZQ83RTJ",
+			"timestamp": "2020-04-30T20:17:10.968Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiLINK": {
+			"name": "SynthiLINK",
+			"address": "41923da063991fcf63226237a45a7950fa97cf9fa7",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TPJTUxASccgKinwsJNmc4ViWZtQPNWkkYV",
+			"timestamp": "2020-04-30T20:17:16.643Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiLTC": {
+			"name": "TokenStateiLTC",
+			"address": "4108592c47b5d9b6defbe55ec5256c7f728ce12c5f",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TAjMESUxyMdr1GAX62qcUhmWv5G7jVJxev",
+			"timestamp": "2020-04-30T20:17:29.186Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiLTC": {
+			"name": "ProxyiLTC",
+			"address": "41d8329adcbc58dafe57844bb138f4cf3290d98a89",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TVgMaayZ6cesNHp2VkQdown99bRjGZwYfG",
+			"timestamp": "2020-04-30T20:17:33.918Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiLTC": {
+			"name": "SynthiLTC",
+			"address": "413f925b36f2c815df6da5afd93e4bce4d26220cc5",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TFmLuAAWHpvNE349jYYaFhXorsqo1E7fS1",
+			"timestamp": "2020-04-30T20:17:39.777Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiCEX": {
+			"name": "TokenStateiCEX",
+			"address": "411b72f0181c8dc0d523e56cd873bf8260c3e76f74",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TCULwG7u3ptFJ7RM1f9abvtWge7huaA2Ma",
+			"timestamp": "2020-04-30T20:17:52.216Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiCEX": {
+			"name": "ProxyiCEX",
+			"address": "41fc76fd6a976e8ba2a3d5f475cd075e57c18a59d6",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TYz7pxs8DzFZdEnqzBQ3AqpRxH6TvhpM9D",
+			"timestamp": "2020-04-30T20:17:56.915Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiCEX": {
+			"name": "SynthiCEX",
+			"address": "411ddacfcc500b6518cca24322e58fc7c353a83396",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TCh4ivgNvpgXZY2gVXMoM6sF4JmVobcPnZ",
+			"timestamp": "2020-04-30T20:18:02.117Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"TokenStateiDEFI": {
+			"name": "TokenStateiDEFI",
+			"address": "41b3e00a99f2c5399449906815176e36214724b1c5",
+			"source": "TokenState",
+			"link": "https://shasta.tronscan.org/#/address/TSNJM4q3TP9Tz4nxiPLaazVCumvBp2ecgD",
+			"timestamp": "2020-04-30T20:18:14.865Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"ProxyiDEFI": {
+			"name": "ProxyiDEFI",
+			"address": "418c552df76dffa79cfdfc70d4a45a14ff374512b1",
+			"source": "ProxyERC20",
+			"link": "https://shasta.tronscan.org/#/address/TNmDeJ3LiuoajtrtYdxGzgQn5cEKhDJWba",
+			"timestamp": "2020-04-30T20:18:19.640Z",
+			"txn": "",
+			"network": "shasta"
+		},
+		"SynthiDEFI": {
+			"name": "SynthiDEFI",
+			"address": "41ba4bf52eeac88e3dab3bd1bbd799a41e82f2101c",
+			"source": "PurgeableSynth",
+			"link": "https://shasta.tronscan.org/#/address/TSxFgNmy3MTgAsEaqp8dECu7XQzZjKHZEy",
+			"timestamp": "2020-04-30T20:18:25.317Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"Depot": {
 			"name": "Depot",
+<<<<<<< Updated upstream
 			"address": "412d0b89edf0a8c70fb3b3f30d8db3b5352419c23b",
 			"source": "Depot",
 			"link": "https://shasta.tronscan.org/#/address/TE5PERLGtjeDndGxYppaFp9AqJCe7R8QPc",
 			"timestamp": "2020-07-04T19:04:16.890Z",
+=======
+			"address": "41e2b2440cbd2bcf996ab6d13149f6fe101fc40367",
+			"source": "Depot",
+			"link": "https://shasta.tronscan.org/#/address/TWdsGYDGvU7XEWGPZzM8fdMDWURgYzEzKY",
+			"timestamp": "2020-04-30T20:18:39.373Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"ArbRewarder": {
 			"name": "ArbRewarder",
+<<<<<<< Updated upstream
 			"address": "415a02069cf53a3bc995a6e22904cf50cb3d39f9ad",
 			"source": "ArbRewarder",
 			"link": "https://shasta.tronscan.org/#/address/TJB8F5etifoMGu11PmQZfGgwmRTEj7SSKG",
 			"timestamp": "2020-07-04T19:04:24.542Z",
+=======
+			"address": "416e21024bb9ef9d99b38a5558027b4e339fcd3804",
+			"source": "ArbRewarder",
+			"link": "https://shasta.tronscan.org/#/address/TL1WsfSmdZ6sTYzdNzmw8QCaf31h8jSHcV",
+			"timestamp": "2020-04-30T20:18:44.888Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		},
 		"DappMaintenance": {
 			"name": "DappMaintenance",
+<<<<<<< Updated upstream
 			"address": "418ff0188996bbab8e06ff3d69506685b33fdf1ae2",
 			"source": "DappMaintenance",
 			"link": "https://shasta.tronscan.org/#/address/TP6HFeEikzEcSW1gBEqqbyGKFZ4L5RnAJy",
 			"timestamp": "2020-07-04T19:04:46.029Z",
+=======
+			"address": "418a795001e610bca7bca2357c10b40a3d551d3b54",
+			"source": "DappMaintenance",
+			"link": "https://shasta.tronscan.org/#/address/TNbPaUSPFJZoshKvkky1LfxCi5eGao46dt",
+			"timestamp": "2020-04-30T20:18:56.169Z",
+>>>>>>> Stashed changes
 			"txn": "",
 			"network": "shasta"
 		}

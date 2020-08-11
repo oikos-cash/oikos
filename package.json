@@ -1,6 +1,6 @@
 {
 	"name": "@oikos/oikos",
-	"version": "0.4.2",
+	"version": "0.4.3",
 	"license": "MIT",
 	"author": "Oikos",
 	"description": "The smart contracts which make up the Oikos system. (oikos.cash)",
@@ -17,6 +17,7 @@
 		"test:testnet": "node test/testnet",
 		"truffle": "truffle",
 		"deploy:mainnet": "node publish deploy -n mainnet -d publish/deployed/mainnet --yes",
+		"addNewSynths:mainnet": "node publish deploy -n mainnet -d publish/deployed/mainnet --yes --add-new-synths",
 		"build": "node publish build"
 	},
 	"repository": {
