@@ -21,7 +21,7 @@ https://etherscan.io/address/0xA3de830b5208851539De8e4FF158D635E8f36FCb#code
 -----------------------------------------------------------------
 */
 
-pragma solidity 0.5.8;
+pragma solidity 0.4.25;
 
 import "./SafeDecimalMath.sol";
 import "./Owned.sol";

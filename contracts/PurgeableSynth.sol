@@ -21,101 +21,82 @@ no longer used, purge allows the owner to purge all holders balances into sUSD
 -----------------------------------------------------------------
 */
 
-pragma solidity 0.5.8;
 
-import './SafeDecimalMath.sol';
-import './ExchangeRates.sol';
-import './Synth.sol';
-import './interfaces/ISynthetix.sol';
+pragma solidity 0.4.25;
+
+import "./SafeDecimalMath.sol";
+import "./ExchangeRates.sol";
+import "./Synth.sol";
+import "./interfaces/ISynthetix.sol";
+
 
 contract PurgeableSynth is Synth {
-	using SafeDecimalMath for uint256;
 
-	// The maximum allowed amount of tokenSupply in equivalent sUSD value for this synth to permit purging
-	uint256 public maxSupplyToPurgeInUSD = 100000 * SafeDecimalMath.unit(); // 100,000
+    using SafeDecimalMath for uint;
 
-	// Track exchange rates so we can determine if supply in USD is below threshold at purge time
-	ExchangeRates public exchangeRates;
+    // The maximum allowed amount of tokenSupply in equivalent sUSD value for this synth to permit purging
+    uint public maxSupplyToPurgeInUSD = 100000 * SafeDecimalMath.unit(); // 100,000
 
-	/* ========== CONSTRUCTOR ========== */
+    // Track exchange rates so we can determine if supply in USD is below threshold at purge time
+    ExchangeRates public exchangeRates;
 
-	constructor(
-		address _proxy,
-		TokenState _tokenState,
-		address _synthetixProxy,
-		IFeePool _feePool,
-		string _tokenName,
-		string _tokenSymbol,
-		address _owner,
-		bytes32 _currencyKey,
-		ExchangeRates _exchangeRates,
-		uint256 _totalSupply
-	)
-		public
-		Synth(
-			_proxy,
-			_tokenState,
-			_synthetixProxy,
-			_feePool,
-			_tokenName,
-			_tokenSymbol,
-			_owner,
-			_currencyKey,
-			_totalSupply
-		)
-	{
-		exchangeRates = _exchangeRates;
-	}
+    /* ========== CONSTRUCTOR ========== */
 
-	/* ========== MUTATIVE FUNCTIONS ========== */
+    constructor(address _proxy, TokenState _tokenState, address _synthetixProxy, IFeePool _feePool,
+        string _tokenName, string _tokenSymbol, address _owner, bytes32 _currencyKey, ExchangeRates _exchangeRates, uint _totalSupply
+    )
+        Synth(_proxy, _tokenState, _synthetixProxy, _feePool, _tokenName, _tokenSymbol, _owner, _currencyKey, _totalSupply)
+        public
+    {
+        exchangeRates = _exchangeRates;
+    }
 
-	/**
-	 * @notice Function that allows owner to exchange any number of holders back to sUSD (for frozen or deprecated synths)
-	 * @param addresses The list of holders to purge
-	 */
-	function purge(address[] addresses) external optionalProxy_onlyOwner {
-		uint256 maxSupplyToPurge = exchangeRates.effectiveValue(
-			'sUSD',
-			maxSupplyToPurgeInUSD,
-			currencyKey
-		);
+    /* ========== MUTATIVE FUNCTIONS ========== */
 
-		// Only allow purge when total supply is lte the max or the rate is frozen in ExchangeRates
-		require(
-			totalSupply <= maxSupplyToPurge || exchangeRates.rateIsFrozen(currencyKey),
-			'Cannot purge as total supply is above threshold and rate is not frozen.'
-		);
+    /**
+     * @notice Function that allows owner to exchange any number of holders back to sUSD (for frozen or deprecated synths)
+     * @param addresses The list of holders to purge
+     */
+    function purge(address[] addresses)
+        external
+        optionalProxy_onlyOwner
+    {
+        uint maxSupplyToPurge = exchangeRates.effectiveValue("sUSD", maxSupplyToPurgeInUSD, currencyKey);
 
-		for (uint256 i = 0; i < addresses.length; i++) {
-			address holder = addresses[i];
+        // Only allow purge when total supply is lte the max or the rate is frozen in ExchangeRates
+        require(
+            totalSupply <= maxSupplyToPurge || exchangeRates.rateIsFrozen(currencyKey),
+            "Cannot purge as total supply is above threshold and rate is not frozen."
+        );
 
-			uint256 amountHeld = balanceOf(holder);
+        for (uint i = 0; i < addresses.length; i++) {
+            address holder = addresses[i];
 
-			if (amountHeld > 0) {
-				ISynthetix(synthetixProxy).synthInitiatedExchange(
-					holder,
-					currencyKey,
-					amountHeld,
-					'sUSD',
-					holder
-				);
-				emitPurged(holder, amountHeld);
-			}
-		}
-	}
+            uint amountHeld = balanceOf(holder);
 
-	/* ========== SETTERS ========== */
+            if (amountHeld > 0) {
+                ISynthetix(synthetixProxy).synthInitiatedExchange(holder, currencyKey, amountHeld, "sUSD", holder);
+                emitPurged(holder, amountHeld);
+            }
 
-	function setExchangeRates(ExchangeRates _exchangeRates) external optionalProxy_onlyOwner {
-		exchangeRates = _exchangeRates;
-	}
+        }
 
-	/* ========== EVENTS ========== */
+    }
 
-	event Purged(address indexed account, uint256 value);
-	bytes32 constant PURGED_SIG = keccak256('Purged(address,uint256)');
+    /* ========== SETTERS ========== */
 
-	function emitPurged(address account, uint256 value) internal {
-		proxy._emit(abi.encode(value), 2, PURGED_SIG, bytes32(account), 0, 0);
-	}
+    function setExchangeRates(ExchangeRates _exchangeRates)
+        external
+        optionalProxy_onlyOwner
+    {
+        exchangeRates = _exchangeRates;
+    }
+
+    /* ========== EVENTS ========== */
+
+    event Purged(address indexed account, uint value);
+    bytes32 constant PURGED_SIG = keccak256("Purged(address,uint256)");
+    function emitPurged(address account, uint value) internal {
+        proxy._emit(abi.encode(value), 2, PURGED_SIG, bytes32(account), 0, 0);
+    }
 }

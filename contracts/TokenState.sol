@@ -32,54 +32,58 @@ contract to the new one.
 -----------------------------------------------------------------
 */
 
-pragma solidity 0.5.8;
+pragma solidity 0.4.25;
 
-import './State.sol';
+
+import "./State.sol";
 
 /**
  * @title ERC20 Token State
  * @notice Stores balance information of an ERC20 token contract.
  */
 contract TokenState is State {
-	/* ERC20 fields. */
-	mapping(address => uint256) public balanceOf;
-	mapping(address => mapping(address => uint256)) public allowance;
 
-	/**
-	 * @dev Constructor
-	 * @param _owner The address which controls this contract.
-	 * @param _associatedContract The ERC20 contract whose state this composes.
-	 */
-	constructor(address _owner, address _associatedContract)
-		public
-		State(_owner, _associatedContract)
-	{}
+    /* ERC20 fields. */
+    mapping(address => uint) public balanceOf;
+    mapping(address => mapping(address => uint)) public allowance;
 
-	/* ========== SETTERS ========== */
+    /**
+     * @dev Constructor
+     * @param _owner The address which controls this contract.
+     * @param _associatedContract The ERC20 contract whose state this composes.
+     */
+    constructor(address _owner, address _associatedContract)
+        State(_owner, _associatedContract)
+        public
+    {}
 
-	/**
-	 * @notice Set ERC20 allowance.
-	 * @dev Only the associated contract may call this.
-	 * @param tokenOwner The authorising party.
-	 * @param spender The authorised party.
-	 * @param value The total value the authorised party may spend on the
-	 * authorising party's behalf.
-	 */
-	function setAllowance(
-		address tokenOwner,
-		address spender,
-		uint256 value
-	) external onlyAssociatedContract {
-		allowance[tokenOwner][spender] = value;
-	}
+    /* ========== SETTERS ========== */
 
-	/**
-	 * @notice Set the balance in a given account
-	 * @dev Only the associated contract may call this.
-	 * @param account The account whose value to set.
-	 * @param value The new balance of the given account.
-	 */
-	function setBalanceOf(address account, uint256 value) external onlyAssociatedContract {
-		balanceOf[account] = value;
-	}
+    /**
+     * @notice Set ERC20 allowance.
+     * @dev Only the associated contract may call this.
+     * @param tokenOwner The authorising party.
+     * @param spender The authorised party.
+     * @param value The total value the authorised party may spend on the
+     * authorising party's behalf.
+     */
+    function setAllowance(address tokenOwner, address spender, uint value)
+        external
+        onlyAssociatedContract
+    {
+        allowance[tokenOwner][spender] = value;
+    }
+
+    /**
+     * @notice Set the balance in a given account
+     * @dev Only the associated contract may call this.
+     * @param account The account whose value to set.
+     * @param value The new balance of the given account.
+     */
+    function setBalanceOf(address account, uint value)
+        external
+        onlyAssociatedContract
+    {
+        balanceOf[account] = value;
+    }
 }

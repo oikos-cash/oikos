@@ -1,8 +1,8 @@
-pragma solidity 0.5.8;
+pragma solidity 0.4.25;
 
 /**
  * @title RewardsDistribution interface
  */
 interface IRewardsDistribution {
-	function distributeRewards(uint256 amount) external;
+    function distributeRewards(uint amount) external;
 }

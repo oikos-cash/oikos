@@ -1,15 +1,8 @@
-pragma solidity 0.5.8;
+pragma solidity 0.4.25;
 
 interface ISynth {
-	function burn(address account, uint256 amount) external;
-
-	function issue(address account, uint256 amount) external;
-
-	function transfer(address to, uint256 value) external returns (bool);
-
-	function transferFrom(
-		address from,
-		address to,
-		uint256 value
-	) external returns (bool);
+    function burn(address account, uint amount) external;
+    function issue(address account, uint amount) external;
+    function transfer(address to, uint value) external returns (bool);
+    function transferFrom(address from, address to, uint value) external returns (bool);
 }

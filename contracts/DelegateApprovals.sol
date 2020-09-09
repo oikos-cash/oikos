@@ -29,40 +29,45 @@ contract.
 
 -----------------------------------------------------------------
 */
-pragma solidity 0.5.8;
+pragma solidity 0.4.25;
 
-import './State.sol';
+
+import "./State.sol";
 
 contract DelegateApprovals is State {
-	// Approvals - [authoriser][delegate]
-	// Each authoriser can have multiple delegates
-	mapping(address => mapping(address => bool)) public approval;
 
-	/**
-	 * @dev Constructor
-	 * @param _owner The address which controls this contract.
-	 * @param _associatedContract The contract whose approval state this composes.
-	 */
-	constructor(address _owner, address _associatedContract)
-		public
-		State(_owner, _associatedContract)
-	{}
+    // Approvals - [authoriser][delegate]
+    // Each authoriser can have multiple delegates
+    mapping(address => mapping(address => bool)) public approval;
 
-	function setApproval(address authoriser, address delegate) external onlyAssociatedContract {
-		approval[authoriser][delegate] = true;
-		emit Approval(authoriser, delegate);
-	}
+    /**
+     * @dev Constructor
+     * @param _owner The address which controls this contract.
+     * @param _associatedContract The contract whose approval state this composes.
+     */
+    constructor(address _owner, address _associatedContract)
+        State(_owner, _associatedContract)
+        public
+    {}
 
-	function withdrawApproval(address authoriser, address delegate)
-		external
-		onlyAssociatedContract
-	{
-		delete approval[authoriser][delegate];
-		emit WithdrawApproval(authoriser, delegate);
-	}
+    function setApproval(address authoriser, address delegate)
+        external
+        onlyAssociatedContract
+    {
+        approval[authoriser][delegate] = true;
+        emit Approval(authoriser, delegate);
+    }
 
-	/* ========== EVENTS ========== */
+    function withdrawApproval(address authoriser, address delegate)
+        external
+        onlyAssociatedContract
+    {
+        delete approval[authoriser][delegate];
+        emit WithdrawApproval(authoriser, delegate);
+    }
 
-	event Approval(address indexed authoriser, address delegate);
-	event WithdrawApproval(address indexed authoriser, address delegate);
+     /* ========== EVENTS ========== */
+
+    event Approval(address indexed authoriser, address delegate);
+    event WithdrawApproval(address indexed authoriser, address delegate);
 }
