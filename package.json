@@ -1,6 +1,6 @@
 {
 	"name": "@oikos/oikos",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"license": "MIT",
 	"author": "Oikos",
 	"description": "The smart contracts which make up the Oikos system. (oikos.cash)",
