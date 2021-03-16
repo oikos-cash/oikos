@@ -619,9 +619,9 @@ contract Depot is SelfDestructible, Pausable {
         view
         returns (uint)
     {
-        uint value = amount / 10**6
+        uint value = amount;
         // How much is the TRX they sent us worth in sUSD (ignoring the transfer fee)?
-        amount = amount * 10 * 18;
+        amount = amount * 10 **18;
         uint valueSentInSynths = amount.multiplyDecimal(usdToEthPrice);
 
         // Now, how many OKS will that USD amount buy?
