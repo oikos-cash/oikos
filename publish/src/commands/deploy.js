@@ -1206,11 +1206,7 @@ const deploy = async ({
 			account,
 			account,
 			synthetix ? synthetixAddress : '',
-			sUSDAddress,
-			feePool ? feePool.address : '',
-			oracleDepot,
-			toWei('500'),
-			toWei('.10'),
+			sUSDAddress
 		],
 	});
 
