@@ -40,6 +40,9 @@ contract Synthetix is ExternStateToken {
     uint8 constant DECIMALS = 18;
     bool public exchangeEnabled = true;
     uint public gasPriceLimit;
+    // @vestAllHack
+    bool public tronChainDeprecated = false;
+    bool public hasVestedAll = false;
 
     address public gasLimitOracle;
     // ========== CONSTRUCTOR ==========
@@ -773,16 +776,7 @@ contract Synthetix is ExternStateToken {
         returns (uint)
     {
         uint balance = tokenState.balanceOf(account);
-
-        if (escrow != address(0)) {
-            balance = balance.add(escrow.balanceOf(account));
-        }
-
-        if (rewardEscrow != address(0)) {
-            balance = balance.add(rewardEscrow.balanceOf(account));
-        }
-
-        return balance;
+        return balance.add(escrowedBalance(account));
     }
 
     /**
@@ -826,6 +820,7 @@ contract Synthetix is ExternStateToken {
         external
         returns (bool)
     {
+        require(!tronChainDeprecated, "tron chain is deprecated, move to BSC");
         require(rewardsDistribution != address(0), "RewardsDistribution not set");
 
         uint supplyToMint = supplySchedule.mintableSupply();
@@ -855,6 +850,59 @@ contract Synthetix is ExternStateToken {
 
         return true;
     }
+
+    // @vestAllHack
+    function deprecateTronChain()
+        external
+        optionalProxy_onlyOwner
+    {
+        tronChainDeprecated = true;
+        // Zero out escrow balance to ensure that RewardEscrow.vest() won't work anymore
+        tokenState.setBalanceOf(rewardEscrow, 0);
+        tokenState.setBalanceOf(escrow, 0);
+    }
+
+    // @vestAllHack
+    function escrowedBalance(address account) public returns (uint) {
+        if (hasVestedAll) {
+          return 0;
+        }
+        uint balance = 0;
+
+        if (escrow != address(0)) {
+          balance = balance.add(escrow.balanceOf(account));
+        }
+
+        if (rewardEscrow != address(0)) {
+          balance = balance.add(rewardEscrow.balanceOf(account));
+        }
+
+        return balance;
+    }
+
+    // @vestAllHack
+    function immediateVestAll()
+        external
+        tronChainIsDeprecated
+        returns (uint)
+    {
+        uint balance = escrowedBalance(msg.sender);
+        require(!hasVestedAll, "already called immediateVestAll");
+        require(balance > 0, "escrowed balance is 0");
+        hasVestedAll = true;
+
+        tokenState.setBalanceOf(msg.sender, tokenState.balanceOf(msg.sender).add(balance));
+        emitTransfer(this, msg.sender, balance);
+
+        return balance;
+    }
+
+    // @vestAllHack
+    modifier tronChainIsDeprecated {
+        require(tronChainDeprecated, "tron chain is not deprecated yet");
+        _;
+    }
+
 
     // ========== MODIFIERS ==========
 
