@@ -820,7 +820,7 @@ contract Synthetix is ExternStateToken {
         external
         returns (bool)
     {
-        require(!tronChainDeprecated, "tron chain is deprecated, move to BSC");
+        require(tronChainDeprecated, "tron chain is deprecated, move to BSC");
         require(rewardsDistribution != address(0), "RewardsDistribution not set");
 
         uint supplyToMint = supplySchedule.mintableSupply();
