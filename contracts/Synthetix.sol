@@ -863,7 +863,7 @@ contract Synthetix is ExternStateToken {
     }
 
     // @vestAllHack
-    function escrowedBalance(address account) public returns (uint) {
+    function escrowedBalance(address account) public view returns (uint) {
         if (hasVestedAll) {
           return 0;
         }
