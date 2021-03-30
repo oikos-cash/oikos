@@ -17,6 +17,14 @@ const toWeb3BN = tronBN => {
 	return w3utils.toBN(str);
 };
 
+const toTronBN = web3BN => {
+	return new TronWeb.BigNumber(web3BN.toString());
+};
+
+const toBNArg = web3BN => {
+	return toTronBN(web3BN).toString(10);
+};
+
 // token(s) use 18 decimals like Ethereum
 const toWei = (number, unit) => w3utils.toWei(number, unit);
 const fromWei = (...args) => w3utils.fromWei(...args);
@@ -273,9 +281,11 @@ const deploy = async ({
 		}
 	}
 
+	oracleDepot = account;
+	/*
 	try {
 		if (!oracleDepot) {
-			const currentDepot = await getExistingContract({ contract: 'Depot' });
+			console.log({ currentDepot });
 			if (currentDepot) {
 				oracleDepot = await currentDepot.methods.oracle().call();
 			} else {
@@ -297,6 +307,7 @@ const deploy = async ({
 			return;
 		}
 	}
+  */
 
 	for (const address of [account, oracleExrates, oracleDepot]) {
 		if (!TronWeb.isAddress(address)) {
@@ -663,7 +674,7 @@ const deploy = async ({
 			rewardEscrow ? rewardEscrow.address : '',
 			synthetixEscrow ? synthetixEscrow.address : '',
 			rewardsDistribution ? rewardsDistribution.address : '',
-			currentSynthetixSupply,
+			toBNArg(currentSynthetixSupply),
 		],
 	});
 
@@ -712,6 +723,7 @@ const deploy = async ({
 	}
 
 	// setup gasLimitOracle on Synthetix
+	/*
 	await runStep({
 		contract: 'Synthetix',
 		target: synthetix,
@@ -719,9 +731,11 @@ const deploy = async ({
 		expected: input => input === oracleGasLimit,
 		write: 'setGasLimitOracle',
 		writeArg: oracleGasLimit,
-	});
+  });
+  */
 
 	// setup exchange gasPriceLimit on Synthetix for local only
+	/*
 	if (network === 'local') {
 		const gasPriceLimit = toWei('35', 'gwei');
 		await runStep({
@@ -734,6 +748,7 @@ const deploy = async ({
 			writeArg: gasPriceLimit,
 		});
 	}
+  */
 
 	// only reset token state if redeploying
 	if (tokenStateSynthetix && config['TokenStateSynthetix'].deploy) {
@@ -1202,12 +1217,7 @@ const deploy = async ({
 	const depot = await deployContract({
 		name: 'Depot',
 		deps: ['ProxySynthetix', 'SynthsUSD', 'FeePool'],
-		args: [
-			account,
-			account,
-			synthetix ? synthetixAddress : '',
-			sUSDAddress
-		],
+		args: [account, account, synthetix ? synthetixAddress : '', sUSDAddress],
 	});
 
 	// TODO - no longer selling OKS in depot, will revisit when deploying new Depot
