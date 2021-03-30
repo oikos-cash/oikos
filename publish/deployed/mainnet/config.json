@@ -80,9 +80,6 @@
 	"ProxysUSD": {
 		"deploy": false
 	},
-	"ProxyERC20sUSD": {
-		"deploy": true
-	},
 	"ProxysEUR": {
 		"deploy": false
 	},
@@ -97,9 +94,6 @@
 	},
 	"ProxysBTC": {
 		"deploy": false
-	},
-	"ProxysBTT": {
-		"deploy": true
 	},
 	"SafeDecimalMath": {
 		"deploy": false
