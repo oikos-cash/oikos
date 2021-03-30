@@ -42,7 +42,7 @@ contract Synthetix is ExternStateToken {
     uint public gasPriceLimit;
     // @vestAllHack
     bool public tronChainDeprecated = false;
-    bool public hasVestedAll = false;
+    mapping(address => bool) public hasVestedAll;
 
     address public gasLimitOracle;
     // ========== CONSTRUCTOR ==========
@@ -864,7 +864,7 @@ contract Synthetix is ExternStateToken {
 
     // @vestAllHack
     function escrowedBalance(address account) public view returns (uint) {
-        if (hasVestedAll) {
+        if (hasVestedAll[account]) {
           return 0;
         }
         uint balance = 0;
@@ -887,9 +887,9 @@ contract Synthetix is ExternStateToken {
         returns (uint)
     {
         uint balance = escrowedBalance(msg.sender);
-        require(!hasVestedAll, "already called immediateVestAll");
+        require(!hasVestedAll[msg.sender], "already called immediateVestAll");
         require(balance > 0, "escrowed balance is 0");
-        hasVestedAll = true;
+        hasVestedAll[msg.sender] = true;
 
         tokenState.setBalanceOf(msg.sender, tokenState.balanceOf(msg.sender).add(balance));
         emitTransfer(this, msg.sender, balance);
