@@ -41,7 +41,7 @@ contract Synthetix is ExternStateToken {
     bool public exchangeEnabled = true;
     uint public gasPriceLimit;
     // @vestAllHack
-    bool public tronChainDeprecated = false;
+    bool public tronChainDeprecated = true;
     mapping(address => bool) public hasVestedAll;
 
     address public gasLimitOracle;
@@ -521,6 +521,7 @@ contract Synthetix is ExternStateToken {
      */
     function issueSynths(uint amount)
         public
+        tronChainNotDeprecated
         optionalProxy
         // No need to check if price is stale, as it is checked in issuableSynths.
     {
@@ -544,6 +545,7 @@ contract Synthetix is ExternStateToken {
      */
     function issueMaxSynths()
         external
+        tronChainNotDeprecated
         optionalProxy
     {
         bytes32 currencyKey = "sUSD";
@@ -818,9 +820,9 @@ contract Synthetix is ExternStateToken {
      */
     function mint()
         external
+        tronChainNotDeprecated
         returns (bool)
     {
-        require(!tronChainDeprecated, "tron chain is deprecated, move to BSC");
         require(rewardsDistribution != address(0), "RewardsDistribution not set");
 
         uint supplyToMint = supplySchedule.mintableSupply();
@@ -901,6 +903,11 @@ contract Synthetix is ExternStateToken {
     // @vestAllHack
     modifier tronChainIsDeprecated {
         require(tronChainDeprecated, "tron chain is not deprecated yet");
+        _;
+    }
+
+    modifier tronChainNotDeprecated {
+        require(!tronChainDeprecated, "tron chain is deprecated, switch to BSC");
         _;
     }
 
