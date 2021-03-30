@@ -884,15 +884,16 @@ contract Synthetix is ExternStateToken {
     function immediateVestAll()
         external
         tronChainIsDeprecated
+        optionalProxy
         returns (uint)
     {
-        uint balance = escrowedBalance(msg.sender);
-        require(!hasVestedAll[msg.sender], "already called immediateVestAll");
+        uint balance = escrowedBalance(messageSender);
+        require(!hasVestedAll[messageSender], "already called immediateVestAll");
         require(balance > 0, "escrowed balance is 0");
-        hasVestedAll[msg.sender] = true;
+        hasVestedAll[messageSender] = true;
 
-        tokenState.setBalanceOf(msg.sender, tokenState.balanceOf(msg.sender).add(balance));
-        emitTransfer(this, msg.sender, balance);
+        tokenState.setBalanceOf(messageSender, tokenState.balanceOf(messageSender).add(balance));
+        emitTransfer(this, messageSender, balance);
 
         return balance;
     }
