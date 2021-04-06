@@ -532,7 +532,7 @@ const deploy = async ({
 			synthetixState ? synthetixState.address : '',
 			rewardEscrow ? rewardEscrow.address : '',
 			ZERO_ADDRESS,
-			currentExchangeFee, // exchange fee
+			toBNArg(currentExchangeFee), // exchange fee
 		],
 	});
 
