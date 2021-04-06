@@ -3,7 +3,7 @@ pragma solidity 0.4.25;
 /**
  * @title Synthetix interface contract
  * @notice Abstract contract to hold public getters
- * @dev pseudo interface, actually declared as contract to hold the public getters 
+ * @dev pseudo interface, actually declared as contract to hold the public getters
  */
 import "../interfaces/ISynthetixState.sol";
 import "../interfaces/ISynth.sol";
@@ -23,8 +23,11 @@ contract ISynthetix {
     IExchangeRates public exchangeRates;
 
     uint public totalSupply;
-        
+
     mapping(bytes32 => Synth) public synths;
+
+    bool public tronChainDeprecated;
+    mapping(address => bool) public hasVestedAll;
 
     // ========== PUBLIC FUNCTIONS ==========
 

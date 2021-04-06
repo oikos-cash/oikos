@@ -10,6 +10,7 @@ import "./Synth.sol";
 import "./interfaces/ISynthetixEscrow.sol";
 import "./interfaces/IFeePool.sol";
 import "./interfaces/IRewardsDistribution.sol";
+import "./interfaces/ISynthetix.sol";
 
 /**
  * @title Synthetix ERC20 contract.
@@ -32,6 +33,7 @@ contract Synthetix is ExternStateToken {
     SynthetixState public synthetixState;
     SupplySchedule public supplySchedule;
     IRewardsDistribution public rewardsDistribution;
+    ISynthetix public oldSynthetix;
 
     bool private protectionCircuit = false;
 
@@ -63,7 +65,8 @@ contract Synthetix is ExternStateToken {
      */
     constructor(address _proxy, TokenState _tokenState, SynthetixState _synthetixState,
         address _owner, ExchangeRates _exchangeRates, IFeePool _feePool, SupplySchedule _supplySchedule,
-        ISynthetixEscrow _rewardEscrow, ISynthetixEscrow _escrow, IRewardsDistribution _rewardsDistribution, uint _totalSupply
+        ISynthetixEscrow _rewardEscrow, ISynthetixEscrow _escrow, IRewardsDistribution _rewardsDistribution, uint _totalSupply,
+        ISynthetix _oldSynthetix
     )
         ExternStateToken(_proxy, _tokenState, TOKEN_NAME, TOKEN_SYMBOL, _totalSupply, DECIMALS, _owner)
         public
@@ -75,6 +78,7 @@ contract Synthetix is ExternStateToken {
         rewardEscrow = _rewardEscrow;
         escrow = _escrow;
         rewardsDistribution = _rewardsDistribution;
+        oldSynthetix = _oldSynthetix;
     }
     // ========== SETTERS ========== */
 
@@ -521,7 +525,6 @@ contract Synthetix is ExternStateToken {
      */
     function issueSynths(uint amount)
         public
-        tronChainNotDeprecated
         optionalProxy
         // No need to check if price is stale, as it is checked in issuableSynths.
     {
@@ -545,7 +548,6 @@ contract Synthetix is ExternStateToken {
      */
     function issueMaxSynths()
         external
-        tronChainNotDeprecated
         optionalProxy
     {
         bytes32 currencyKey = "sUSD";
@@ -864,9 +866,13 @@ contract Synthetix is ExternStateToken {
         tokenState.setBalanceOf(escrow, 0);
     }
 
+    function _hasVestedAll(address account) public view returns (bool) {
+      return (oldSynthetix.hasVestedAll(account) || hasVestedAll[account]);
+    }
+
     // @vestAllHack
     function escrowedBalance(address account) public view returns (uint) {
-        if (hasVestedAll[account]) {
+        if (_hasVestedAll(account)) {
           return 0;
         }
         uint balance = 0;
@@ -890,7 +896,7 @@ contract Synthetix is ExternStateToken {
         returns (uint)
     {
         uint balance = escrowedBalance(messageSender);
-        require(!hasVestedAll[messageSender], "already called immediateVestAll");
+        require(!_hasVestedAll(messageSender), "already called immediateVestAll");
         require(balance > 0, "escrowed balance is 0");
         hasVestedAll[messageSender] = true;
 
