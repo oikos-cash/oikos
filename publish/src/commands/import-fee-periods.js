@@ -5,13 +5,19 @@ const fs = require('fs');
 const w3utils = require('web3-utils');
 const Web3 = require('web3');
 const { red, gray, green, yellow } = require('chalk');
+const { createJavaTronProvider } = require('@opentron/java-tron-provider');
 
 const { CONFIG_FILENAME, DEPLOYMENT_FILENAME } = require('../constants');
+
+const isAddress = addr => {
+	// todo: check if tron address
+	return true;
+};
 
 const DEFAULTS = {
 	gasPrice: '1',
 	gasLimit: 1.5e6, // 1.5m
-	network: 'kovan',
+	network: 'mainnet',
 };
 
 const {
@@ -45,7 +51,7 @@ const importFeePeriods = async ({
 	ensureNetwork(network);
 	ensureDeploymentPath(deploymentPath);
 
-	if (!w3utils.isAddress(sourceContractAddress)) {
+	if (!isAddress(sourceContractAddress)) {
 		throw Error(
 			'Invalid address detected for source (please check your inputs): ',
 			sourceContractAddress
@@ -66,14 +72,21 @@ const importFeePeriods = async ({
 		privateKey = envPrivateKey;
 	}
 
-	const web3 = new Web3(new Web3.providers.HttpProvider(providerUrl));
-	web3.eth.accounts.wallet.add(privateKey);
-	const account = web3.eth.accounts.wallet[0].address;
+	const web3 = new Web3(
+		createJavaTronProvider({
+			network,
+			privateKey,
+		})
+	);
+	// web3.eth.accounts.wallet.add(privateKey);
+	// const account = web3.eth.accounts.wallet[0].address;
+	const account = web3.eth.accounts.privateKeyToAccount(privateKey).address;
 	console.log(gray(`Using account with public key ${account}`));
 
 	const feePeriods = [];
 
-	const { address: targetContractAddress, source } = deployment.targets['FeePool'];
+	const { address: targetContractAddress_, source } = deployment.targets['FeePool'];
+	const targetContractAddress = targetContractAddress_.replace(/^41/, '0x');
 	const { abi } = deployment.sources[source];
 	if (sourceContractAddress.toLowerCase() === targetContractAddress.toLowerCase()) {
 		throw Error(
