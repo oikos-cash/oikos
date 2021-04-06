@@ -561,7 +561,7 @@ contract FeePool is Proxyable, SelfDestructible, LimitedSetup {
 
         // Record vesting entry for claiming address and amount
         // OKS already minted to rewardEscrow balance
-        synthetix.transfer(account, snxAmount);
+        synthetix.transferFrom(FEE_ADDRESS, account, snxAmount);
         // rewardEscrow.appendVestingEntry(account, snxAmount);
     }
 
