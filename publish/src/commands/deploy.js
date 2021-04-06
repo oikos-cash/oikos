@@ -171,9 +171,10 @@ const deploy = async ({
 	let oldExrates;
 	let currentLastMintEvent;
 	let currentWeekOfInflation;
+	let oldSynthetix;
 
 	try {
-		const oldSynthetix = await getExistingContract({ contract: 'Synthetix' });
+		oldSynthetix = await getExistingContract({ contract: 'Synthetix' });
 		if (oldSynthetix) {
 			// TODO: make sure the constants make sense for Tron
 			currentSynthetixSupply = toWeb3BN(await oldSynthetix.methods.totalSupply().call());
@@ -675,6 +676,7 @@ const deploy = async ({
 			synthetixEscrow ? synthetixEscrow.address : '',
 			rewardsDistribution ? rewardsDistribution.address : '',
 			toBNArg(currentSynthetixSupply),
+			oldSynthetix.address,
 		],
 	});
 
